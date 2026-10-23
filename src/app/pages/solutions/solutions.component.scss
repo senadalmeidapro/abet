@@ -1,0 +1,178 @@
+:host {
+    display: block;
+}
+.solution-detail-block {
+    margin-block: 18px;
+    border: 1px solid #e0eafb;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, #fff, #f3f7fd);
+    box-shadow: var(--shadow-soft);
+}
+.solution-detail-block:has(.carbon-detail) {
+    border-color: #c9dcfb;
+    background: linear-gradient(135deg, #f6faff, #e8f2ff);
+}
+.solution-detail-block .section-head {
+    grid-template-columns: minmax(0, 1.1fr) minmax(250px, 0.75fr);
+}
+.solution-detail-block .section-head > p {
+    max-width: 440px;
+    justify-self: end;
+}
+.detail-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: clamp(30px, 7vw, 90px);
+}
+.detail-layout h3 {
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+.detail-layout p {
+    max-width: 560px;
+    margin-bottom: 20px;
+    color: var(--body);
+    font-size: 14px;
+    line-height: 1.8;
+}
+.mock-console,
+.registry-visual {
+    min-height: 290px;
+    padding: 13px;
+    border: 1px solid rgb(160 199 255 / 18%);
+    border-radius: 23px;
+    color: #dceaff;
+    background: linear-gradient(145deg, #081831, #102b57);
+    box-shadow:
+        0 24px 55px rgb(8 24 49 / 25%),
+        0 0 38px rgb(57 139 255 / 12%);
+}
+.console-head,
+.registry-title {
+    display: flex;
+    min-height: 35px;
+    align-items: center;
+    justify-content: space-between;
+    color: #a9c8f5;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+}
+.console-status {
+    color: var(--signal);
+}
+.console-map {
+    position: relative;
+    min-height: 200px;
+    overflow: hidden;
+    border: 1px solid rgb(145 188 255 / 17%);
+    border-radius: 15px;
+    background: #0c2850;
+    background-image:
+        linear-gradient(rgb(123 179 255 / 9%) 1px, transparent 1px),
+        linear-gradient(90deg, rgb(123 179 255 / 9%) 1px, transparent 1px),
+        radial-gradient(ellipse at 70% 50%, #1f5cad, #0c2850 68%);
+    background-size:
+        30px 30px,
+        30px 30px,
+        auto;
+}
+.console-map::before {
+    position: absolute;
+    inset: 18% 20%;
+    border: 1px dashed var(--signal);
+    content: '';
+    transform: rotate(-14deg);
+}
+.mock-console {
+    position: relative;
+}
+.mock-console::after {
+    position: absolute;
+    right: 24px;
+    bottom: 41px;
+    width: 9px;
+    height: 9px;
+    border: 2px solid #e8f5ff;
+    border-radius: 50%;
+    background: var(--sea);
+    box-shadow:
+        0 0 0 8px rgb(57 139 255 / 15%),
+        0 0 26px rgb(125 226 255 / 65%);
+    content: '';
+}
+.console-label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #dceaff;
+    font-size: 10px;
+}
+.console-label small {
+    color: #a9c8f5;
+}
+.console-footer {
+    padding: 8px 3px 1px;
+    color: #a9c8f5;
+    font-size: 9px;
+}
+.registry-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.registry-title {
+    width: 100%;
+    align-self: stretch;
+}
+.ring-chart {
+    display: grid;
+    width: 170px;
+    height: 170px;
+    margin: 12px auto;
+    place-items: center;
+    border: 1px solid #6aaaff;
+    border-radius: 50%;
+    background: radial-gradient(transparent 52%, rgb(116 179 255 / 10%) 53%);
+    box-shadow:
+        inset 0 0 0 17px rgb(57 139 255 / 8%),
+        inset 0 0 0 18px rgb(116 179 255 / 34%),
+        0 0 38px rgb(57 139 255 / 15%);
+    text-align: center;
+}
+.ring-chart div {
+    color: #eaf3ff;
+    font-size: 11px;
+    font-weight: 700;
+}
+.ring-chart small {
+    color: #a9c8f5;
+    font-size: 9px;
+    font-weight: 400;
+}
+.registry-visual > p {
+    margin: 0;
+    color: #a9c8f5;
+    font-size: 9px;
+}
+.carbon-detail {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+}
+.dark-band:has(.band-copy:only-child) {
+    grid-template-columns: 1fr;
+}
+@media (max-width: 760px) {
+    .detail-layout,
+    .carbon-detail {
+        grid-template-columns: 1fr;
+        gap: 27px;
+    }
+    .solution-detail-block .section-head {
+        grid-template-columns: 1fr;
+    }
+    .solution-detail-block .section-head > p {
+        justify-self: start;
+    }
+}

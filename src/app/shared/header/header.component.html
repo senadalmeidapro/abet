@@ -1,0 +1,20 @@
+<header class="header">
+    <a class="brand" routerLink="/" aria-label="ABET for Africa, accueil"
+        ><span class="brand-symbol"><i></i><i></i><i></i></span
+        ><span class="brand-name">ABET <small>FOR AFRICA</small></span></a
+    >
+    <button
+        class="menu-toggle"
+        (click)="menuOpen = !menuOpen"
+        [attr.aria-expanded]="menuOpen"
+        [attr.aria-label]="menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'"
+    >
+        <span></span><span></span>
+    </button>
+    <nav class="nav" [class.open]="menuOpen" aria-label="Navigation principale">
+        @for (item of nav; track item.path) {
+            <a [routerLink]="item.path" [class.active]="isActive(item.path)">{{ item.label }}</a>
+        }
+        <a class="nav-contact" routerLink="/contact">Échanger avec ABET <span>↗</span></a>
+    </nav>
+</header>
