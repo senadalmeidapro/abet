@@ -1,155 +1,155 @@
 <section class="page-hero">
-    <div class="page-hero-copy">
-        <p class="eyebrow"><a routerLink="/">Accueil</a><span>/</span>Contact</p>
-        <h1>Parlons de votre projet.</h1>
-        <p class="lead">
-            Vous souhaitez en savoir plus sur nos solutions ou discuter d’un projet ? Présentez-nous
-            votre besoin afin que votre demande puisse être orientée vers le bon interlocuteur.
-        </p>
-    </div>
-    <div class="page-mark">
-        <span class="mark-ring r1"></span><span class="mark-ring r2"></span
-        ><span class="mark-ring r3"></span><span class="mark-center">HELLO</span>
-    </div>
+  <div class="page-hero-copy">
+    <p class="eyebrow"><a routerLink="/">Accueil</a><span>/</span>Contact</p>
+    <h1>Parlons de votre projet.</h1>
+    <p class="lead">
+      Vous souhaitez en savoir plus sur nos solutions ou discuter d’un projet ? Présentez-nous votre
+      besoin afin que votre demande puisse être orientée vers le bon interlocuteur.
+    </p>
+  </div>
+  <div class="page-mark">
+    <span class="mark-ring r1"></span><span class="mark-ring r2"></span
+    ><span class="mark-ring r3"></span><span class="mark-center">HELLO</span>
+  </div>
 </section>
 
 <section class="section">
-    <div class="section-head">
-        <div>
-            <p class="eyebrow">Motifs de contact</p>
-            <h2>Comment pouvons-nous vous accompagner ?</h2>
-        </div>
-        <p>Choisissez le motif qui se rapproche de votre demande.</p>
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">Motifs de contact</p>
+      <h2>Comment pouvons-nous vous accompagner ?</h2>
     </div>
-    <div class="service-grid">
-        <article>
-            <span>RENSEIGNEMENTS</span>
-            <h3>En savoir plus sur ABET</h3>
-            <p>Pour obtenir des informations sur l’entreprise et ses activités annoncées.</p>
-        </article>
-        <article>
-            <span>PRÉSENTATION</span>
-            <h3>Découvrir une solution</h3>
-            <p>Pour échanger au sujet d’IACD & EEZ Scanner ou du registre environnemental.</p>
-        </article>
-        <article>
-            <span>PARTENARIAT</span>
-            <h3>Projet institutionnel</h3>
-            <p>Pour discuter d’une collaboration, d’un besoin technique ou d’un projet.</p>
-        </article>
-    </div>
+    <p>Choisissez le motif qui se rapproche de votre demande.</p>
+  </div>
+  <div class="service-grid">
+    <article>
+      <span>RENSEIGNEMENTS</span>
+      <h3>En savoir plus sur ABET</h3>
+      <p>Pour obtenir des informations sur l’entreprise et ses activités annoncées.</p>
+    </article>
+    <article>
+      <span>PRÉSENTATION</span>
+      <h3>Découvrir une solution</h3>
+      <p>Pour échanger au sujet d’IACD & EEZ Scanner ou du registre environnemental.</p>
+    </article>
+    <article>
+      <span>PARTENARIAT</span>
+      <h3>Projet institutionnel</h3>
+      <p>Pour discuter d’une collaboration, d’un besoin technique ou d’un projet.</p>
+    </article>
+  </div>
 </section>
 
 <section class="section">
-    <div class="contact-layout">
-        <div class="contact-info">
-            <p class="eyebrow">Formulaire de démonstration</p>
-            <h2>Décrivez-nous votre demande.</h2>
-            <p>
-                Ce formulaire présente les champs à prévoir. Il n’envoie ni n’enregistre aucune
-                information dans ce prototype.
-            </p>
-            <div class="caveat">
-                Le raccordement à un service d’envoi et la notice de confidentialité restent à
-                valider avant toute collecte.
-            </div>
-        </div>
-        <form class="contact-form" (submit)="$event.preventDefault()">
-            <h3>Préparez votre demande</h3>
-            <label
-                >Nom et prénom<input
-                    type="text"
-                    name="name"
-                    placeholder="Nom et prénom"
-                    autocomplete="name"
-                    required
-            /></label>
-            <label
-                >Adresse e-mail professionnelle<input
-                    type="email"
-                    name="email"
-                    placeholder="nom@organisation.org"
-                    autocomplete="email"
-                    required
-            /></label>
-            <label
-                >Organisation<input
-                    type="text"
-                    name="organisation"
-                    placeholder="Ministère, autorité, entreprise…"
-                    autocomplete="organization"
-            /></label>
-            <label
-                >Fonction <span>(facultative)</span
-                ><input
-                    type="text"
-                    name="role"
-                    placeholder="Votre fonction"
-                    autocomplete="organization-title"
-            /></label>
-            <label
-                >Motif de la demande<select name="subject">
-                    <option value="">Choisir un motif</option>
-                    <option>Renseignement général</option>
-                    <option>Présentation d’une solution</option>
-                    <option>Partenariat ou projet institutionnel</option>
-                </select></label
-            >
-            <label
-                >Solution concernée <span>(facultatif)</span
-                ><select name="solution">
-                    <option value="">Aucune solution précise</option>
-                    <option>IACD & EEZ Scanner</option>
-                    <option>Registre environnemental et carbone</option>
-                </select></label
-            >
-            <label class="message-field"
-                >Votre message<textarea
-                    name="message"
-                    rows="4"
-                    placeholder="Quelques lignes sur votre contexte et votre besoin"
-                    required
-                ></textarea>
-            </label>
-            <p class="privacy-note">
-                Voir les informations prévues dans la
-                <a routerLink="/confidentialite">page Confidentialité</a>.
-            </p>
-            <button class="button primary" type="submit" disabled>
-                Formulaire de démonstration non connecté
-            </button>
-            <small>Aucune demande n’est transmise ou enregistrée par ce prototype.</small>
-        </form>
+  <div class="contact-layout">
+    <div class="contact-info">
+      <p class="eyebrow">Formulaire de démonstration</p>
+      <h2>Décrivez-nous votre demande.</h2>
+      <p>
+        Ce formulaire présente les champs à prévoir. Il n’envoie ni n’enregistre aucune information
+        dans ce prototype.
+      </p>
+      <div class="caveat">
+        Le raccordement à un service d’envoi et la notice de confidentialité restent à valider avant
+        toute collecte.
+      </div>
     </div>
+    <form class="contact-form" (submit)="$event.preventDefault()">
+      <h3>Préparez votre demande</h3>
+      <label
+        >Nom et prénom<input
+          type="text"
+          name="name"
+          placeholder="Nom et prénom"
+          autocomplete="name"
+          required
+      /></label>
+      <label
+        >Adresse e-mail professionnelle<input
+          type="email"
+          name="email"
+          placeholder="nom@organisation.org"
+          autocomplete="email"
+          required
+      /></label>
+      <label
+        >Organisation<input
+          type="text"
+          name="organisation"
+          placeholder="Ministère, autorité, entreprise…"
+          autocomplete="organization"
+      /></label>
+      <label
+        >Fonction <span>(facultative)</span
+        ><input
+          type="text"
+          name="role"
+          placeholder="Votre fonction"
+          autocomplete="organization-title"
+      /></label>
+      <label
+        >Motif de la demande<select name="subject">
+          <option value="">Choisir un motif</option>
+          <option>Renseignement général</option>
+          <option>Présentation d’une solution</option>
+          <option>Partenariat ou projet institutionnel</option>
+        </select></label
+      >
+      <label
+        >Solution concernée <span>(facultatif)</span
+        ><select name="solution">
+          <option value="">Aucune solution précise</option>
+          <option>IACD & EEZ Scanner</option>
+          <option>Registre environnemental et carbone</option>
+        </select></label
+      >
+      <label class="message-field"
+        >Votre message<textarea
+          name="message"
+          rows="4"
+          placeholder="Quelques lignes sur votre contexte et votre besoin"
+          required
+        ></textarea>
+      </label>
+      <p class="privacy-note">
+        Voir les informations prévues dans la
+        <a routerLink="/confidentialite">page Confidentialité</a>.
+      </p>
+      <button class="button primary" type="submit" disabled>
+        Formulaire de démonstration non connecté
+      </button>
+      <small>Aucune demande n’est transmise ou enregistrée par ce prototype.</small>
+    </form>
+  </div>
 </section>
 
 <section class="section contact-address">
-    <div class="section-head">
-        <div>
-            <p class="eyebrow">Coordonnées</p>
-            <h2>Retrouver les coordonnées d’ABET.</h2>
-        </div>
-        <p>
-            Ces informations figurent sur le site actuel et doivent être reconfirmées avant la mise
-            en ligne.
-        </p>
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">Coordonnées</p>
+      <h2>Retrouver les coordonnées d’ABET.</h2>
     </div>
-    <div class="contact-info">
-        <a href="mailto:contact@abetforafrica.com">contact&#64;abetforafrica.com</a>
-        <a href="tel:+971585778337">+971 58 577 8337</a>
-        <span>Nad Al Sheba, Meydan City<br />Dubaï, Émirats arabes unis</span>
-    </div>
-    <div class="caveat">Coordonnées reprises du site actuel ; confirmation requise par ABET.</div>
+    <p>
+      Ces informations figurent sur le site actuel et doivent être reconfirmées avant la mise en
+      ligne.
+    </p>
+  </div>
+  <div class="contact-info">
+    <a href="mailto:contact@abetforafrica.com">contact&#64;abetforafrica.com</a>
+    <a href="tel:+971585778337">+971 58 577 8337</a>
+    <span>Nad Al Sheba, Meydan City<br />Dubaï, Émirats arabes unis</span>
+  </div>
+  <div class="caveat">Coordonnées reprises du site actuel ; confirmation requise par ABET.</div>
 </section>
 
 <section class="section final-invitation">
-    <div>
-        <p class="eyebrow">Informations et confidentialité</p>
-        <h2>Vos informations doivent être traitées selon les règles applicables.</h2>
-        <p>
-            Les détails relatifs au traitement des données dépendront des outils réellement mis en
-            place et devront être validés avant l’activation du formulaire.
-        </p>
-    </div>
-    <a class="button text-button" routerLink="/confidentialite">Lire la page Confidentialité</a>
+  <div>
+    <p class="eyebrow">Informations et confidentialité</p>
+    <h2>Vos informations doivent être traitées selon les règles applicables.</h2>
+    <p>
+      Les détails relatifs au traitement des données dépendront des outils réellement mis en place
+      et devront être validés avant l’activation du formulaire.
+    </p>
+  </div>
+  <a class="button text-button" routerLink="/confidentialite">Lire la page Confidentialité</a>
 </section>

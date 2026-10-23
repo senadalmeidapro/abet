@@ -1,20 +1,42 @@
 <header class="header">
-    <a class="brand" routerLink="/" aria-label="ABET for Africa, accueil"
-        ><span class="brand-symbol"><i></i><i></i><i></i></span
-        ><span class="brand-name">ABET <small>FOR AFRICA</small></span></a
-    >
+  <div class="header-inner">
+    <a class="brand" routerLink="/" aria-label="ABET for Africa, accueil">
+      <img src="/logo_abet_head2.png" alt="ABET for Africa" />
+    </a>
+
     <button
-        class="menu-toggle"
-        (click)="menuOpen = !menuOpen"
-        [attr.aria-expanded]="menuOpen"
-        [attr.aria-label]="menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'"
+      class="menu-toggle"
+      type="button"
+      (click)="menuOpen = !menuOpen"
+      [attr.aria-expanded]="menuOpen"
+      aria-controls="primary-navigation"
+      [attr.aria-label]="menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'"
     >
-        <span></span><span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
-    <nav class="nav" [class.open]="menuOpen" aria-label="Navigation principale">
-        @for (item of nav; track item.path) {
-            <a [routerLink]="item.path" [class.active]="isActive(item.path)">{{ item.label }}</a>
-        }
-        <a class="nav-contact" routerLink="/contact">Échanger avec ABET <span>↗</span></a>
+
+    <nav
+      id="primary-navigation"
+      class="nav"
+      [class.open]="menuOpen"
+      aria-label="Navigation principale"
+    >
+      @for (item of nav; track item.path) {
+        <a
+          [routerLink]="item.path"
+          [class.active]="isActive(item.path)"
+          [attr.aria-current]="isActive(item.path) ? 'page' : null"
+          (click)="menuOpen = false"
+        >
+          {{ item.label }}
+        </a>
+      }
+      <a class="nav-contact" routerLink="/contact" (click)="menuOpen = false">
+        Nous contacter
+        <span aria-hidden="true">↗</span>
+      </a>
     </nav>
+  </div>
 </header>
