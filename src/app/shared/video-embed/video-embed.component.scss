@@ -10,9 +10,17 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: var(--radius-md);
+  border-radius: 3px 24px 3px 24px;
   background: #0b1820;
-  box-shadow: var(--shadow-xs);
+  box-shadow: 0 20px 48px rgb(16 42 67 / 13%);
+  transition:
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+}
+
+.video-frame:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 26px 58px rgb(16 42 67 / 18%);
 }
 
 .video-frame iframe {

@@ -1,0 +1,36 @@
+.privacy-hero {
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: linear-gradient(115deg, var(--ocean), var(--lagoon));
+}
+.privacy-hero h1,
+.privacy-hero .lead {
+  color: #fff;
+}
+.legal-copy {
+  padding: clamp(24px, 5vw, 60px);
+  border-left: 3px solid var(--blue);
+  background: var(--paper);
+}
+.legal-copy h2,
+.legal-copy h3 {
+  color: var(--ocean);
+}
+.legal-copy h3 {
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.legal-copy a {
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .privacy-hero {
+    min-height: 300px;
+  }
+  .legal-copy {
+    padding: 24px 20px;
+  }
+}

@@ -190,3 +190,82 @@
     background: #fff;
   }
 }
+
+.solution-card {
+  min-height: 430px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 4px 26px 4px 26px;
+  background: #fff;
+  box-shadow: 0 16px 38px rgb(16 42 67 / 8%);
+  transition:
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+}
+
+.solution-card:hover {
+  border-color: var(--line);
+  box-shadow: 0 22px 48px rgb(16 42 67 / 13%);
+  transform: translateY(-3px);
+}
+
+.solution-content {
+  padding: clamp(30px, 4.3vw, 58px);
+}
+
+.solution-content h3 {
+  color: var(--ocean);
+}
+
+.solution-content > a {
+  position: relative;
+  padding-bottom: 7px;
+  color: var(--ocean);
+}
+
+.solution-content > a::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: var(--signal);
+  content: '';
+  transform: scaleX(0.35);
+  transform-origin: left;
+  transition: transform var(--transition-base);
+}
+
+.solution-content > a:hover::after {
+  transform: scaleX(1);
+}
+
+.solution-card:not(.is-reversed) .card-icon {
+  box-shadow: inset 4px 0 0 var(--lagoon);
+}
+.solution-card.is-reversed .card-icon {
+  box-shadow: inset -4px 0 0 var(--signal);
+}
+
+@media (max-width: 1100px) {
+  .solution-card,
+  .solution-card.is-reversed {
+    border-radius: 4px 20px 4px 20px;
+  }
+  .solution-card:hover {
+    transform: none;
+  }
+  .solution-content {
+    padding: 28px 32px 30px;
+  }
+}
+
+@media (max-width: 760px) {
+  .solution-card,
+  .solution-card.is-reversed {
+    border-radius: 4px 18px 4px 18px;
+  }
+  .solution-content {
+    padding: 24px 22px 26px;
+  }
+}

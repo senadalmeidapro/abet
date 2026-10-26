@@ -6,17 +6,28 @@
 .partner-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0 clamp(22px, 3vw, 42px);
-  border-top: 1px solid var(--line);
+  gap: 12px;
 }
 
 .partner-cell {
   display: grid;
   min-width: 0;
-  min-height: 132px;
+  min-height: 144px;
   place-items: center;
-  padding: 20px 12px;
-  border-bottom: 1px solid var(--line);
+  padding: 22px 18px;
+  border: 1px solid rgb(16 42 67 / 7%);
+  border-radius: 3px 18px 3px 18px;
+  background: #fff;
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.partner-cell:hover {
+  transform: translateY(-3px);
+  border-color: rgb(37 140 130 / 35%);
+  box-shadow: var(--shadow-sm);
 }
 
 .partner-logo {
@@ -25,6 +36,11 @@
   max-width: min(100%, 220px);
   max-height: 84px;
   object-fit: contain;
+  transition: transform var(--transition-base);
+}
+
+.partner-cell:hover .partner-logo {
+  transform: scale(1.035);
 }
 
 .logo-togo {
@@ -64,13 +80,13 @@
 @media (max-width: 760px) {
   .partner-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 24px;
+    gap: 10px;
   }
 
   .partner-cell,
   .partner-grid.compact .partner-cell {
     min-height: 108px;
-    padding-inline: 8px;
+    padding-inline: 10px;
   }
 
   .partner-logo,

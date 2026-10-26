@@ -86,3 +86,96 @@
     margin-top: 28px;
   }
 }
+
+.solutions-hero {
+  min-height: 510px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background:
+    linear-gradient(
+      90deg,
+      rgb(16 42 67 / 96%) 0%,
+      rgb(16 42 67 / 84%) 48%,
+      rgb(16 42 67 / 16%) 100%
+    ),
+    url('/iacd_banner.jpg') center 52% / cover;
+}
+
+.solutions-hero h1,
+.solutions-hero .lead {
+  color: #fff;
+}
+.solutions-hero .page-hero-copy {
+  max-width: 750px;
+}
+.solutions-hero .button.primary {
+  border-color: var(--signal);
+  color: var(--ink);
+  background: var(--signal);
+}
+
+.solution-detail-block {
+  position: relative;
+  overflow: hidden;
+  border: 0;
+}
+.solution-detail-block:nth-of-type(2) {
+  background: #fff;
+}
+.solution-detail-block:nth-of-type(3) {
+  background: var(--paper);
+}
+.solution-detail-block > .section-head {
+  max-width: 900px;
+  margin-bottom: 44px;
+}
+.solution-detail-block > .section-head h2 {
+  color: var(--ocean);
+}
+.solution-detail-block > .section-head .lead {
+  color: var(--color-text);
+}
+.solution-detail-block .detail-layout {
+  align-items: stretch;
+}
+.solution-detail-block .detail-layout > div:first-child {
+  padding: clamp(26px, 4vw, 48px);
+  border-left: 4px solid var(--lagoon);
+  background: var(--paper);
+}
+.solution-detail-block:nth-of-type(3) .service-grid > article {
+  min-height: 270px;
+  padding: 30px 24px;
+  border: 1px solid rgb(16 42 67 / 10%);
+  border-radius: 3px 18px 3px 18px;
+  background: #fff;
+}
+.solution-detail-block:nth-of-type(3) .service-grid > article > span {
+  color: var(--lagoon);
+}
+.solution-video-row {
+  display: flex;
+  justify-content: center;
+}
+.dark-band {
+  background:
+    radial-gradient(ellipse at 100% 0%, rgb(37 140 130 / 23%), transparent 42%), var(--ink);
+}
+
+@media (max-width: 760px) {
+  .solutions-hero {
+    min-height: 430px;
+    background-position: 63% center;
+  }
+  .solution-detail-block > .section-head {
+    margin-bottom: 28px;
+  }
+  .solution-detail-block .detail-layout > div:first-child {
+    padding: 24px 20px;
+  }
+  .solution-detail-block:nth-of-type(3) .service-grid > article {
+    min-height: 0;
+    padding: 23px;
+  }
+}

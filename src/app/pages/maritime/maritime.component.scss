@@ -15,3 +15,106 @@
 .interface-preview app-video-embed {
   margin-top: 34px;
 }
+
+.maritime-hero {
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background:
+    linear-gradient(
+      90deg,
+      rgb(16 42 67 / 96%) 0%,
+      rgb(16 42 67 / 86%) 44%,
+      rgb(16 42 67 / 12%) 100%
+    ),
+    url('/surveillance.jpg') center 42% / cover;
+}
+.maritime-hero h1,
+.maritime-hero .lead {
+  color: #fff;
+}
+.maritime-hero .page-hero-copy {
+  max-width: 810px;
+}
+.maritime-hero .button.primary {
+  border-color: var(--signal);
+  color: var(--ink);
+  background: var(--signal);
+}
+
+.maritime-intro {
+  display: grid;
+  grid-template-columns: minmax(230px, 0.8fr) minmax(0, 1fr);
+  column-gap: clamp(30px, 7vw, 90px);
+  align-content: start;
+  background: var(--paper);
+}
+.maritime-intro .section-head {
+  grid-column: 1;
+  display: block;
+  margin: 0;
+}
+.maritime-intro .section-head h2 {
+  color: var(--ocean);
+}
+.maritime-intro > p {
+  grid-column: 2;
+  max-width: 62ch;
+}
+.maritime-capabilities {
+  background: #fff;
+}
+.maritime-capabilities .sector-list {
+  border-top: 2px solid var(--ocean);
+}
+.maritime-capabilities .sector-list > div {
+  min-height: 124px;
+  padding: 24px 18px 24px 0;
+  border-color: var(--line);
+}
+.maritime-capabilities .sector-list > div:nth-child(odd) {
+  background: linear-gradient(90deg, #f3f7f8, transparent 78%);
+}
+.maritime-capabilities .sector-list b {
+  padding-left: 22px;
+}
+.maritime-capabilities .sector-list b::before {
+  position: absolute;
+  top: 0.35em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--lagoon);
+  box-shadow: 0 0 0 5px rgb(37 140 130 / 12%);
+  content: '';
+}
+.interface-preview {
+  background: var(--ink);
+}
+.interface-preview .section-head h2 {
+  color: #fff;
+}
+.interface-preview app-video-embed {
+  width: min(100%, 1060px);
+}
+
+@media (max-width: 760px) {
+  .maritime-hero {
+    min-height: 440px;
+    background-position: 62% center;
+  }
+  .maritime-intro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .maritime-intro .section-head,
+  .maritime-intro > p {
+    grid-column: 1;
+  }
+  .maritime-capabilities .sector-list > div {
+    min-height: 0;
+    padding: 18px 12px;
+  }
+}

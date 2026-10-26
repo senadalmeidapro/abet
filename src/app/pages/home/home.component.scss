@@ -45,20 +45,18 @@
 .home-hero .hero-copy {
   position: relative;
   z-index: 1;
-  width: min(100%, 900px);
+  width: min(100%, 1000px);
 }
 
 .home-hero h1 {
-  max-width: 17ch;
+  min-width: 1000px;
   margin: 0 0 24px;
   color: #fff;
   font-size: clamp(3.4rem, 6.8vw, 6.3rem);
-  line-height: 0.96;
-  text-wrap: balance;
 }
 
 .home-hero .lead {
-  max-width: 650px;
+  max-width: 800px;
   margin: 0;
   color: #d0dfe7;
 }
@@ -256,5 +254,198 @@
 
   .home-hero .actions .button {
     width: auto;
+  }
+}
+
+/* ABET's maritime identity: one immersive port scene and bold, open content bands. */
+.home-hero.hero {
+  min-height: clamp(620px, 82vh, 820px);
+  background: var(--ink);
+}
+
+.home-hero::after {
+  background:
+    linear-gradient(
+      90deg,
+      rgb(16 42 67 / 96%) 0%,
+      rgb(16 42 67 / 78%) 42%,
+      rgb(16 42 67 / 8%) 100%
+    ),
+    linear-gradient(0deg, rgb(16 42 67 / 42%), transparent 42%);
+}
+
+.home-hero .hero-copy {
+  width: min(100%, 940px);
+  padding-left: clamp(0px, 2.2vw, 28px);
+}
+
+.home-hero h1 {
+  max-width: 14ch;
+  font-size: clamp(3.8rem, 7.7vw, 7.1rem);
+  line-height: 0.88;
+}
+
+.home-hero .button.primary {
+  border-color: var(--signal);
+  border-radius: 3px 14px 3px 14px;
+  color: var(--ink);
+  background: var(--signal);
+}
+
+.home-hero .button.primary:hover {
+  border-color: #f2c574;
+  color: var(--ink);
+  background: #f2c574;
+}
+
+.home-hero .text-button {
+  border-radius: 3px 14px 3px 14px;
+  color: #fff;
+}
+
+.home-hero .text-button:hover {
+  background: rgb(255 255 255 / 12%);
+}
+
+.home-hero .hero-copy::after {
+  position: absolute;
+  right: -70px;
+  bottom: -116px;
+  width: 120px;
+  height: 120px;
+  border: 1px solid rgb(255 255 255 / 38%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 18px rgb(255 255 255 / 5%);
+  content: '';
+  pointer-events: none;
+}
+
+.expertise-section {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background: var(--ink);
+}
+
+.expertise-section::after {
+  position: absolute;
+  top: -120px;
+  right: -160px;
+  width: min(42vw, 580px);
+  aspect-ratio: 1;
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 42px rgb(255 255 255 / 2%),
+    0 0 0 96px rgb(255 255 255 / 2%);
+  content: '';
+  pointer-events: none;
+}
+
+.expertise-section .section-head h2,
+.expertise-section .sector-list b {
+  color: #fff;
+}
+
+.expertise-section .sector-list {
+  position: relative;
+  z-index: 1;
+  border-color: rgb(255 255 255 / 32%);
+}
+
+.expertise-section .sector-list > div {
+  position: relative;
+  border-color: rgb(255 255 255 / 17%);
+}
+
+.expertise-section .sector-list > div::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background: var(--lagoon);
+  content: '';
+}
+
+.expertise-section .sector-list > div:nth-child(3n)::before {
+  background: var(--signal);
+}
+
+.expertise-section .sector-list > div:nth-child(3n + 2)::before {
+  background: var(--blue);
+}
+
+.expertise-section .sector-list small {
+  color: #bdcfdb;
+}
+
+.expertise-section .section-link,
+.expertise-section .section-head {
+  position: relative;
+  z-index: 1;
+}
+
+.expertise-section .section-link a {
+  border-color: var(--signal);
+  color: #fff;
+}
+
+.solutions-section {
+  background: var(--paper);
+}
+
+.proof-band {
+  border: 0;
+  color: #fff;
+  background: var(--ocean);
+}
+
+.proof-band h2 {
+  color: #fff;
+}
+
+.proof-band > p {
+  color: #d9e7ef;
+}
+
+.proof-band > a {
+  color: #fff;
+}
+
+.final-invitation {
+  border: 0;
+  color: #fff;
+  background: var(--ink);
+}
+
+.final-invitation h2 {
+  color: #fff;
+}
+
+.final-invitation > div > p:last-child {
+  color: #c4d4de;
+}
+
+.final-invitation .button {
+  border-radius: 3px 14px 3px 14px;
+}
+
+@media (max-width: 760px) {
+  .home-hero::after {
+    background: linear-gradient(180deg, rgb(16 42 67 / 48%), rgb(16 42 67 / 96%) 76%);
+  }
+
+  .home-hero .hero-copy {
+    padding-left: 17px;
+  }
+
+  .home-hero .hero-copy::after,
+  .expertise-section::after {
+    display: none;
+  }
+
+  .expertise-section {
+    gap: 25px;
   }
 }
