@@ -1,0 +1,17 @@
+<article
+  class="solution-card"
+  [class.is-reversed]="reverse"
+  [class.carbon-card]="theme === 'carbon'"
+>
+  <div class="solution-content">
+    <div class="card-top">
+      <span class="tag">{{ category }}</span>
+    </div>
+    <h3>{{ title }}</h3>
+    <p>{{ description }}</p>
+    <a [routerLink]="link">{{ linkLabel }} <span>↗</span></a>
+  </div>
+  <div class="card-icon">
+    <img [src]="image" alt="" />
+  </div>
+</article>

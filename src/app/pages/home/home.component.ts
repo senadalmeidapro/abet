@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { HomeApproachDiagramComponent } from './home-approach-diagram.component';
+import { HomeSolutionCardComponent } from './home-solution-card.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink],
+  imports: [HomeApproachDiagramComponent, HomeSolutionCardComponent, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

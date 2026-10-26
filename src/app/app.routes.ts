@@ -27,7 +27,7 @@ export const routes: Routes = [
       {
         path: 'solutions/registre-carbone',
         component: CarbonRegistryComponent,
-        title: 'Registre carbone — ABET for Africa',
+        title: 'Africa Blue Port and Airport Carbone Registry — ABET for Africa',
       },
       {
         path: 'solutions',
@@ -38,7 +38,7 @@ export const routes: Routes = [
       {
         path: 'projets',
         component: ProjectsComponent,
-        title: 'Projets & références — ABET for Africa',
+        title: 'Cas d’usage — ABET for Africa',
       },
       {
         path: 'ressources',

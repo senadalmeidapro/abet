@@ -1,0 +1,87 @@
+:host {
+  display: block;
+}
+
+.band-diagram {
+  position: relative;
+  display: grid;
+  width: min(100%, 330px);
+  aspect-ratio: 1;
+  justify-self: center;
+  place-items: center;
+}
+
+.orbit {
+  position: absolute;
+  border: 1px solid rgb(168 216 209 / 33%);
+  border-radius: 50%;
+}
+
+.orbit.o1 {
+  inset: 0;
+}
+
+.orbit.o2 {
+  inset: 28px;
+  border-color: rgb(233 174 77 / 52%);
+}
+
+.orbit.o3 {
+  inset: 56px;
+  border-style: dashed;
+}
+
+.diagram-core {
+  display: grid;
+  width: 110px;
+  aspect-ratio: 1;
+  place-content: center;
+  border-radius: 50%;
+  color: var(--ink);
+  background: #f4f8f7;
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.diagram-core span {
+  display: block;
+  color: var(--ocean);
+  font-family: var(--font-primary);
+  font-size: 0.68rem;
+}
+
+.orbit-label {
+  position: absolute;
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+  color: #fff;
+  background: #173c57;
+  font-size: 0.77rem;
+}
+
+.orbit-label.l1 {
+  top: 10%;
+  right: -4%;
+}
+
+.orbit-label.l2 {
+  bottom: 14%;
+  left: 0;
+}
+
+.orbit-label.l3 {
+  right: 8%;
+  bottom: 9%;
+}
+
+@media (max-width: 760px) {
+  .band-diagram {
+    width: 240px;
+  }
+
+  .orbit-label.l1 {
+    right: -11%;
+  }
+}

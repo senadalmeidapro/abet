@@ -1,0 +1,45 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1fr);
+  align-items: start;
+  gap: clamp(42px, 9vw, 130px);
+}
+.about-grid h2 {
+  margin: 0 0 20px;
+}
+.about-grid > div:first-child > p:last-child {
+  color: var(--muted);
+}
+.principles {
+  border-top: 1px solid var(--line);
+}
+.principles > div {
+  display: block;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.principles span {
+  grid-row: span 2;
+  color: var(--lagoon);
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.principles b {
+  color: var(--ink);
+}
+.principles p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.values-panel {
+  background: var(--paper);
+}
+
+@media (max-width: 760px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
