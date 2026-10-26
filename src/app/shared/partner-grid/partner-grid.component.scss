@@ -1,0 +1,89 @@
+:host {
+  display: block;
+  min-width: 0;
+}
+
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 clamp(22px, 3vw, 42px);
+  border-top: 1px solid var(--line);
+}
+
+.partner-cell {
+  display: grid;
+  min-width: 0;
+  min-height: 132px;
+  place-items: center;
+  padding: 20px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.partner-logo {
+  display: block;
+  width: auto;
+  max-width: min(100%, 220px);
+  max-height: 84px;
+  object-fit: contain;
+}
+
+.logo-togo {
+  max-height: 96px;
+}
+
+.logo-rdc {
+  width: min(100%, 170px);
+  max-height: 70px;
+}
+
+.logo-airudi {
+  max-width: min(100%, 210px);
+  max-height: 74px;
+}
+
+.logo-best-for-africa {
+  width: min(100%, 198px);
+  height: 84px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.logo-hairun {
+  max-height: 100px;
+}
+
+.logo-data-protect {
+  max-width: min(100%, 230px);
+  max-height: 66px;
+}
+
+.partner-grid.compact .partner-cell {
+  min-height: 116px;
+}
+
+@media (max-width: 760px) {
+  .partner-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 24px;
+  }
+
+  .partner-cell,
+  .partner-grid.compact .partner-cell {
+    min-height: 108px;
+    padding-inline: 8px;
+  }
+
+  .partner-logo,
+  .logo-togo,
+  .logo-rdc,
+  .logo-airudi,
+  .logo-best-for-africa,
+  .logo-hairun,
+  .logo-data-protect {
+    max-height: 72px;
+  }
+
+  .logo-best-for-africa {
+    height: 72px;
+  }
+}

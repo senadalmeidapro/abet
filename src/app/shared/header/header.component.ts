@@ -12,12 +12,11 @@ export class HeaderComponent {
   menuOpen = false;
 
   readonly nav = [
-    // { label: 'Accueil', path: '/' },
+    { label: 'Accueil', path: '/' },
     { label: 'À propos', path: '/a-propos' },
-    { label: 'Solutions', path: '/solutions' },
-    { label: 'Services', path: '/services' },
-    { label: 'Cas d’usage', path: '/projets' },
-    { label: 'Ressources', path: '/ressources' },
+    { label: 'Domaines d’activités', path: '/services' },
+    { label: 'Nos Solutions', path: '/solutions' },
+    { label: 'Partenaires', path: '/partenaires' },
   ];
 
   constructor(private router: Router) {}

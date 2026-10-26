@@ -1,3 +1,17 @@
 .interface-preview {
   background: var(--paper);
 }
+
+.section > p {
+  max-width: 74ch;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.section-head h2 {
+  max-width: 24ch;
+}
+
+.interface-preview app-video-embed {
+  margin-top: 34px;
+}

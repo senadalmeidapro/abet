@@ -323,13 +323,13 @@ small {
 }
 .section-head {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(260px, 0.65fr);
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.58fr);
   align-items: end;
-  gap: clamp(32px, 7vw, 100px);
-  margin-bottom: 42px;
+  gap: clamp(24px, 5vw, 72px);
+  margin-bottom: clamp(30px, 4vw, 46px);
 }
 .section-head h2 {
-  max-width: 720px;
+  max-width: 22ch;
   margin: 0;
 }
 .section-head > p {
@@ -354,38 +354,20 @@ small {
   color: var(--signal);
 }
 
-/* Distinct page mastheads and cartographic marker */
+/* Shared page masthead */
 .page-hero {
   position: relative;
-  display: grid;
-  min-height: 360px;
-  grid-template-columns: minmax(0, 1fr) 250px;
-  align-items: center;
-  gap: 44px;
+  display: block;
+  min-height: 0;
   overflow: hidden;
-  padding: clamp(56px, 7vw, 92px) var(--section-gutter);
+  padding: clamp(62px, 8.5vw, 112px) var(--section-gutter);
   background: var(--paper);
-  border-bottom: 1px solid var(--line);
-}
-.page-hero::after {
-  position: absolute;
-  right: 0;
-  bottom: -100px;
-  width: min(42vw, 570px);
-  height: 240px;
-  border-top: 1px solid rgb(33 117 189 / 15%);
-  border-radius: 50%;
-  box-shadow:
-    0 -25px 0 -24px rgb(33 117 189 / 14%),
-    0 -51px 0 -50px rgb(33 117 189 / 13%),
-    0 -77px 0 -76px rgb(33 117 189 / 12%);
-  content: '';
-  pointer-events: none;
 }
 .page-hero-copy {
   position: relative;
   z-index: 1;
-  max-width: 850px;
+  width: min(100%, 960px);
+  margin-inline: 0 auto;
 }
 .page-hero .breadcrumbs {
   margin-bottom: 21px;
@@ -394,9 +376,11 @@ small {
   color: var(--muted);
 }
 .page-hero h1 {
-  max-width: 860px;
-  margin: 0 0 20px;
-  font-size: clamp(3rem, 5.3vw, 5.1rem);
+  max-width: 19ch;
+  margin: 0 0 24px;
+  font-size: clamp(3rem, 5.4vw, 5.25rem);
+  line-height: 0.99;
+  text-wrap: balance;
 }
 .page-hero .lead {
   max-width: 700px;
@@ -404,53 +388,8 @@ small {
   color: var(--muted);
 }
 .page-hero .actions {
-  margin-top: 25px;
+  margin-top: 30px;
 }
-.page-mark {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  width: 218px;
-  aspect-ratio: 1;
-  justify-self: end;
-  place-items: center;
-}
-.mark-ring {
-  position: absolute;
-  display: block;
-  border: 1px solid rgb(33 117 189 / 30%);
-  border-radius: 50%;
-}
-.mark-ring.r1 {
-  inset: 0;
-}
-.mark-ring.r2 {
-  inset: 16px;
-  border-style: dashed;
-  border-color: rgb(37 140 130 / 44%);
-}
-.mark-ring.r3 {
-  inset: 36px;
-  border-color: rgb(233 174 77 / 65%);
-}
-.mark-center {
-  display: grid;
-  width: 96px;
-  aspect-ratio: 1;
-  place-items: center;
-  border-radius: 50%;
-  color: #fff;
-  background: var(--ocean);
-  font-family: var(--font-heading);
-  font-size: 1.65rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-}
-.page-hero:not(:has(.page-mark)) {
-  grid-template-columns: 1fr;
-  min-height: 320px;
-}
-
 /* Reusable content patterns */
 
 .sector-list > div {
@@ -487,31 +426,26 @@ small {
 .service-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: clamp(22px, 3.2vw, 46px);
 }
 .service-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 clamp(22px, 3vw, 42px);
 }
-.solution-card,
 .service-grid > article {
-  position: relative;
   min-width: 0;
-  padding: 28px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  background: #fff;
-  box-shadow: var(--shadow-card);
-  transition:
-    border-color var(--transition-fast),
-    box-shadow var(--transition-fast),
-    transform var(--transition-fast);
+  padding: 26px 0 30px;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  transition: border-color var(--transition-fast);
 }
-.solution-card:hover,
 .service-grid > article:hover {
-  border-color: #c5d7df;
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-2px);
+  border-color: var(--lagoon);
+  box-shadow: none;
+  transform: none;
 }
 .solution-card {
   display: flex;
@@ -579,20 +513,20 @@ small {
   color: #a67727;
 }
 .service-grid > article {
-  padding: 25px 22px 24px;
-  border: 1px solid var(--line);
+  padding: 25px 0 28px;
 }
 .service-grid article > span {
   display: block;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
   color: var(--lagoon);
-  font-size: 0.72rem;
+  font-size: 0.76rem;
   font-weight: 700;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.035em;
 }
 .service-grid article h3 {
-  margin: 0 0 12px;
-  font-size: 1.55rem;
+  margin: 0 0 14px;
+  font-size: clamp(1.4rem, 1.8vw, 1.75rem);
+  text-wrap: balance;
 }
 .service-grid article p {
   margin: 0;
@@ -621,6 +555,7 @@ small {
   align-items: center;
   justify-content: space-between;
   gap: 32px;
+  border-top: 1px solid var(--line);
   padding-inline: var(--section-gutter);
 }
 .final-invitation h2 {
@@ -883,12 +818,6 @@ small {
   .service-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .page-hero {
-    grid-template-columns: minmax(0, 1fr) 190px;
-  }
-  .page-mark {
-    width: 180px;
-  }
 }
 @media (max-width: 760px) {
   :root {
@@ -902,34 +831,12 @@ small {
   body {
     font-size: 16px;
   }
-  .page-hero,
-  .page-hero:not(:has(.page-mark)) {
+  .page-hero {
     min-height: 0;
-    grid-template-columns: 1fr;
-    gap: 22px;
-    padding: 54px var(--page-gutter) 50px;
-  }
-  .page-hero::after {
-    width: 60vw;
-    opacity: 0.65;
+    padding: 58px var(--page-gutter) 54px;
   }
   .page-hero h1 {
-    font-size: clamp(2.85rem, 11vw, 4.4rem);
-  }
-  .page-mark {
-    width: 120px;
-    justify-self: start;
-    margin-left: 4px;
-  }
-  .mark-center {
-    width: 62px;
-    font-size: 1.18rem;
-  }
-  .mark-ring.r2 {
-    inset: 10px;
-  }
-  .mark-ring.r3 {
-    inset: 25px;
+    font-size: clamp(2.6rem, 9.5vw, 4.25rem);
   }
   .section-head {
     grid-template-columns: 1fr;
@@ -942,6 +849,9 @@ small {
   .solution-grid,
   .service-grid {
     grid-template-columns: 1fr;
+  }
+  .service-grid {
+    gap: 0;
   }
   .sector-list > div {
     grid-template-columns: minmax(0, 1fr);

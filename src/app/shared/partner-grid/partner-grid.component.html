@@ -1,0 +1,13 @@
+<div class="partner-grid" [class.compact]="compact" aria-label="Partenaires ABET">
+  @for (partner of partners; track partner.name) {
+    <div class="partner-cell">
+      <img
+        [class]="'partner-logo ' + partner.logoClass"
+        [src]="partner.src"
+        [alt]="partner.name"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  }
+</div>

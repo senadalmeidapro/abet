@@ -1,87 +1,79 @@
 :host {
   display: block;
+  min-width: 0;
 }
 
 .band-diagram {
-  position: relative;
   display: grid;
-  width: min(100%, 330px);
-  aspect-ratio: 1;
-  justify-self: center;
-  place-items: center;
+  width: min(100%, 500px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: 14px 20px;
+  justify-self: end;
 }
 
 .orbit {
-  position: absolute;
-  border: 1px solid rgb(168 216 209 / 33%);
-  border-radius: 50%;
-}
-
-.orbit.o1 {
-  inset: 0;
-}
-
-.orbit.o2 {
-  inset: 28px;
-  border-color: rgb(233 174 77 / 52%);
-}
-
-.orbit.o3 {
-  inset: 56px;
-  border-style: dashed;
+  display: none;
 }
 
 .diagram-core {
-  display: grid;
-  width: 110px;
-  aspect-ratio: 1;
-  place-content: center;
-  border-radius: 50%;
-  color: var(--ink);
-  background: #f4f8f7;
+  display: flex;
+  grid-column: 1 / -1;
+  align-items: baseline;
+  gap: 10px;
+  width: auto;
+  aspect-ratio: auto;
+  margin-bottom: 12px;
+  border-radius: 0;
+  color: #fff;
+  background: transparent;
   font-family: var(--font-heading);
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   font-weight: 700;
-  text-align: center;
+  line-height: 1;
+  text-align: left;
 }
 
 .diagram-core span {
-  display: block;
-  color: var(--ocean);
+  color: #cad8e0;
   font-family: var(--font-primary);
-  font-size: 0.68rem;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 .orbit-label {
-  position: absolute;
-  padding: 3px 8px;
-  border-radius: var(--radius-pill);
+  position: static;
+  padding: 13px 0 0;
+  border-top: 2px solid var(--lagoon);
+  border-radius: 0;
   color: #fff;
-  background: #173c57;
-  font-size: 0.77rem;
-}
-
-.orbit-label.l1 {
-  top: 10%;
-  right: -4%;
+  background: transparent;
+  font-size: 0.92rem;
+  font-weight: 600;
 }
 
 .orbit-label.l2 {
-  bottom: 14%;
-  left: 0;
+  border-color: var(--signal);
 }
 
-.orbit-label.l3 {
-  right: 8%;
-  bottom: 9%;
-}
-
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
   .band-diagram {
-    width: 240px;
+    width: min(100%, 620px);
+    justify-self: start;
+  }
+}
+
+@media (max-width: 560px) {
+  .band-diagram {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
-  .orbit-label.l1 {
-    right: -11%;
+  .diagram-core {
+    grid-column: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    margin-bottom: 8px;
   }
 }

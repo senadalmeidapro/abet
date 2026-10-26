@@ -3,11 +3,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { CarbonRegistryComponent } from './pages/carbon-registry/carbon-registry.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
-import { LegalNoticeComponent } from './pages/legal-notice/legal-notice.component';
 import { MaritimeComponent } from './pages/maritime/maritime.component';
-import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
-import { ResourcesComponent } from './pages/resources/resources.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { SolutionsComponent } from './pages/solutions/solutions.component';
 import { LayoutComponent } from './shared/layout/layout.component';
@@ -34,28 +31,21 @@ export const routes: Routes = [
         component: SolutionsComponent,
         title: 'Solutions — ABET for Africa',
       },
-      { path: 'services', component: ServicesComponent, title: 'Services — ABET for Africa' },
       {
-        path: 'projets',
+        path: 'services',
+        component: ServicesComponent,
+        title: 'Domaines d’activités — ABET for Africa',
+      },
+      {
+        path: 'partenaires',
         component: ProjectsComponent,
-        title: 'Cas d’usage — ABET for Africa',
+        title: 'Partenaires — ABET for Africa',
       },
-      {
-        path: 'ressources',
-        component: ResourcesComponent,
-        title: 'Ressources — ABET for Africa',
-      },
+      { path: 'projets', redirectTo: 'partenaires', pathMatch: 'full' },
+      { path: 'ressources', redirectTo: 'solutions', pathMatch: 'full' },
       { path: 'contact', component: ContactComponent, title: 'Contact — ABET for Africa' },
-      {
-        path: 'mentions',
-        component: LegalNoticeComponent,
-        title: 'Mentions légales — ABET for Africa',
-      },
-      {
-        path: 'confidentialite',
-        component: PrivacyPolicyComponent,
-        title: 'Confidentialité — ABET for Africa',
-      },
+      { path: 'mentions', redirectTo: 'contact', pathMatch: 'full' },
+      { path: 'confidentialite', redirectTo: 'contact', pathMatch: 'full' },
       { path: '**', redirectTo: '/' },
     ],
   },
