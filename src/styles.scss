@@ -1,5 +1,4 @@
 :root {
-  /* Brand palette */
   --ink: #102a43;
   --ocean: #1459a6;
   --blue: #2175bd;
@@ -12,7 +11,6 @@
   --font-primary: 'Source Sans 3', 'Segoe UI', sans-serif;
   --font-heading: 'Barlow Condensed', 'Arial Narrow', sans-serif;
 
-  /* Semantic color aliases */
   --color-primary: var(--ink);
   --color-primary-hover: #183b58;
   --color-primary-active: #0b1e30;
@@ -48,7 +46,6 @@
   --color-info: #1459a6;
   --color-info-bg: #e8f1fa;
 
-  /* Shared layout */
   --container-xl: 1220px;
   --container-2xl: 1320px;
   --page-gutter: 24px;
@@ -57,7 +54,6 @@
   --header-height-mobile: 68px;
   --section-space-y: clamp(68px, 8vw, 112px);
 
-  /* Shape and elevation */
   --radius-xs: 4px;
   --radius-sm: 7px;
   --radius-md: 11px;
@@ -74,13 +70,11 @@
   --shadow-hover: 0 12px 28px rgb(16 42 67 / 10%);
   --shadow-dropdown: 0 16px 38px rgb(16 42 67 / 14%);
 
-  /* Motion and stacking */
   --transition-fast: 160ms ease;
   --transition-base: 240ms ease;
   --transition-slow: 360ms ease;
   --z-header: 300;
 
-  /* Controls and focus */
   --button-height-md: 48px;
   --button-height-lg: 54px;
   --button-padding-x: 23px;
@@ -94,14 +88,12 @@
   --focus-offset: 3px;
 }
 
-/* Reset and box sizing */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Application-wide base styles */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 94px;
@@ -124,7 +116,6 @@ textarea {
   font: inherit;
 }
 
-/* Shared control behavior */
 input,
 select,
 textarea {
@@ -179,7 +170,6 @@ textarea:user-invalid {
   border-color: var(--color-danger);
 }
 
-/* Global typography */
 h1,
 h2,
 h3,
@@ -209,7 +199,6 @@ small {
   font-size: 0.86rem;
 }
 
-/* Shared structural utilities */
 .section {
   padding: var(--section-space-y) var(--section-gutter);
 }
@@ -350,7 +339,6 @@ small {
   color: var(--signal);
 }
 
-/* Shared page masthead */
 .page-hero {
   position: relative;
   display: block;
@@ -386,7 +374,6 @@ small {
 .page-hero .actions {
   margin-top: 30px;
 }
-/* Reusable content patterns */
 
 .sector-list > div {
   display: grid;
