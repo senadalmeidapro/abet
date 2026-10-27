@@ -3,13 +3,13 @@
 }
 
 .section > p {
-  max-width: 74ch;
+  max-width: 630px;
   color: var(--muted);
   font-size: 1.05rem;
 }
 
 .section-head h2 {
-  max-width: 24ch;
+  max-width: 850px;
 }
 
 .interface-preview app-video-embed {
@@ -60,13 +60,10 @@
 }
 .maritime-intro > p {
   grid-column: 2;
-  max-width: 62ch;
+  max-width: 530px;
 }
 .maritime-capabilities {
   background: #fff;
-}
-.maritime-capabilities .sector-list {
-  border-top: 2px solid var(--ocean);
 }
 .maritime-capabilities .sector-list > div {
   min-height: 124px;
@@ -78,17 +75,6 @@
 }
 .maritime-capabilities .sector-list b {
   padding-left: 22px;
-}
-.maritime-capabilities .sector-list b::before {
-  position: absolute;
-  top: 0.35em;
-  left: 0;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--lagoon);
-  box-shadow: 0 0 0 5px rgb(37 140 130 / 12%);
-  content: '';
 }
 .interface-preview {
   background: var(--ink);

@@ -36,18 +36,17 @@
   position: relative;
   min-height: 220px;
   padding: 28px 18px 30px 0;
-  border-top: 1px solid var(--line);
   background: transparent;
   transition:
     background-color var(--transition-base),
     padding var(--transition-base);
 }
 .service-grid > article h3 {
-  max-width: 16ch;
+  max-width: 260px;
   color: var(--ink);
 }
 .service-grid > article p {
-  max-width: 40ch;
+  max-width: 340px;
 }
 .final-invitation {
   border-radius: 10px;

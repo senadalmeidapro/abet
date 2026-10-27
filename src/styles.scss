@@ -325,7 +325,7 @@ small {
   margin-bottom: clamp(30px, 4vw, 46px);
 }
 .section-head h2 {
-  max-width: 22ch;
+  max-width: 680px;
   margin: 0;
 }
 .section-head > p {
@@ -372,7 +372,7 @@ small {
   color: var(--muted);
 }
 .page-hero h1 {
-  max-width: 19ch;
+  max-width: 800px;
   margin: 0 0 24px;
   font-size: clamp(3rem, 5.4vw, 5.25rem);
   line-height: 0.99;
@@ -432,14 +432,12 @@ small {
   min-width: 0;
   padding: 26px 0 30px;
   border: 0;
-  border-top: 1px solid var(--line);
   border-radius: 0;
   background: transparent;
   box-shadow: none;
   transition: border-color var(--transition-fast);
 }
 .service-grid > article:hover {
-  border-color: var(--lagoon);
   box-shadow: none;
   transform: none;
 }
