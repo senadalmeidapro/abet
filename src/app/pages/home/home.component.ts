@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { HomeApproachDiagramComponent } from './home-approach-diagram.component';
+import { HomeDiagramComponent } from './home-diagram.component';
 import { HomeSolutionCardComponent } from './home-solution-card.component';
 import { PartnerGridComponent } from '../../shared/partner-grid/partner-grid.component';
 
@@ -8,7 +8,7 @@ import { PartnerGridComponent } from '../../shared/partner-grid/partner-grid.com
   selector: 'app-home',
   standalone: true,
   imports: [
-    HomeApproachDiagramComponent,
+    HomeDiagramComponent,
     HomeSolutionCardComponent,
     PartnerGridComponent,
     RouterLink,

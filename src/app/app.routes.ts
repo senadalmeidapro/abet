@@ -4,7 +4,7 @@ import { CarbonRegistryComponent } from './pages/carbon-registry/carbon-registry
 import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MaritimeComponent } from './pages/maritime/maritime.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
+import { PartnersComponent } from './pages/partners/partners.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { SolutionsComponent } from './pages/solutions/solutions.component';
 import { LayoutComponent } from './shared/layout/layout.component';
@@ -38,7 +38,7 @@ export const routes: Routes = [
       },
       {
         path: 'partenaires',
-        component: ProjectsComponent,
+        component: PartnersComponent,
         title: 'Partenaires — ABET for Africa',
       },
       { path: 'projets', redirectTo: 'partenaires', pathMatch: 'full' },

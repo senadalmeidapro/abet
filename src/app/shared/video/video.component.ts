@@ -2,12 +2,12 @@ import { Component, inject, Input, OnChanges } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-video-embed',
+  selector: 'app-video',
   standalone: true,
-  templateUrl: './video-embed.component.html',
-  styleUrl: './video-embed.component.scss',
+  templateUrl: './video.component.html',
+  styleUrl: './video.component.scss',
 })
-export class VideoEmbedComponent implements OnChanges {
+export class VideoComponent implements OnChanges {
   @Input({ required: true }) videoId = '';
   @Input({ required: true }) title = '';
 
