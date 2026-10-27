@@ -18,21 +18,7 @@
   display: flex;
   align-items: center;
   color: #fff;
-  background:
-    radial-gradient(circle at 88% 48%, rgb(37 140 130 / 30%) 0 8%, transparent 8.2%),
-    radial-gradient(
-      circle at 88% 48%,
-      transparent 0 18%,
-      rgb(255 255 255 / 12%) 18.1% 18.3%,
-      transparent 18.5%
-    ),
-    radial-gradient(
-      circle at 88% 48%,
-      transparent 0 29%,
-      rgb(255 255 255 / 9%) 29.1% 29.3%,
-      transparent 29.5%
-    ),
-    var(--ocean);
+  background: var(--ocean);
 }
 .contact-hero h1,
 .contact-hero .lead {
@@ -64,7 +50,7 @@
   padding: 30px 26px;
   border: 1px solid var(--line);
   border-top: 3px solid var(--lagoon);
-  border-radius: 3px 20px 3px 20px;
+  border-radius: 10px;
   background: #fff;
   box-shadow: var(--shadow-xs);
   transition:

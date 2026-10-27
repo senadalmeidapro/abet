@@ -287,7 +287,6 @@
 
 .home-hero .button.primary {
   border-color: var(--signal);
-  border-radius: 3px 14px 3px 14px;
   color: var(--ink);
   background: var(--signal);
 }
@@ -299,7 +298,6 @@
 }
 
 .home-hero .text-button {
-  border-radius: 3px 14px 3px 14px;
   color: #fff;
 }
 
@@ -327,21 +325,6 @@
   background: var(--ink);
 }
 
-.expertise-section::after {
-  position: absolute;
-  top: -120px;
-  right: -160px;
-  width: min(42vw, 580px);
-  aspect-ratio: 1;
-  border: 1px solid rgb(255 255 255 / 10%);
-  border-radius: 50%;
-  box-shadow:
-    0 0 0 42px rgb(255 255 255 / 2%),
-    0 0 0 96px rgb(255 255 255 / 2%);
-  content: '';
-  pointer-events: none;
-}
-
 .expertise-section .section-head h2,
 .expertise-section .sector-list b {
   color: #fff;
@@ -356,24 +339,6 @@
 .expertise-section .sector-list > div {
   position: relative;
   border-color: rgb(255 255 255 / 17%);
-}
-
-.expertise-section .sector-list > div::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30px;
-  height: 3px;
-  background: var(--lagoon);
-  content: '';
-}
-
-.expertise-section .sector-list > div:nth-child(3n)::before {
-  background: var(--signal);
-}
-
-.expertise-section .sector-list > div:nth-child(3n + 2)::before {
-  background: var(--blue);
 }
 
 .expertise-section .sector-list small {
@@ -428,7 +393,6 @@
 }
 
 .final-invitation .button {
-  border-radius: 3px 14px 3px 14px;
 }
 
 @media (max-width: 760px) {

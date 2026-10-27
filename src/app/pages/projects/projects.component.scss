@@ -33,11 +33,11 @@ app-partner-grid {
   display: block;
   padding: clamp(18px, 3vw, 34px);
   border: 1px solid var(--line);
-  border-radius: 4px 24px 4px 24px;
+  border-radius: 10px;
   background: var(--paper);
 }
 .final-invitation {
-  border-radius: 4px 26px 4px 26px;
+  border-radius: 10px;
 }
 
 @media (max-width: 760px) {

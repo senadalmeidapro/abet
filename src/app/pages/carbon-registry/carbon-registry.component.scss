@@ -84,7 +84,7 @@
   padding: clamp(24px, 3vw, 36px);
   border: 1px solid rgb(255 255 255 / 16%);
   border-top: 3px solid var(--lagoon);
-  border-radius: 3px 20px 3px 20px;
+  border-radius: 10px;
   background: rgb(255 255 255 / 5%);
 }
 .carbon-pillars .service-grid > article:nth-child(2) {
@@ -121,7 +121,7 @@
   min-height: 230px;
   padding: 28px;
   border: 1px solid var(--line);
-  border-radius: 3px 18px 3px 18px;
+  border-radius: 10px;
   background: #fff;
 }
 .carbon-value .service-grid > article h3 {
