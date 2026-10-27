@@ -3,7 +3,7 @@
   min-width: 0;
 }
 
-.band-diagram {
+.diagram {
   display: grid;
   width: min(100%, 500px);
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -12,11 +12,11 @@
   justify-self: end;
 }
 
-.orbit {
+.ring {
   display: none;
 }
 
-.diagram-core {
+.core {
   display: flex;
   grid-column: 1 / -1;
   align-items: baseline;
@@ -34,14 +34,14 @@
   text-align: left;
 }
 
-.diagram-core span {
+.core span {
   color: #cad8e0;
   font-family: var(--font-primary);
   font-size: 0.85rem;
   font-weight: 500;
 }
 
-.orbit-label {
+.step {
   position: static;
   padding: 13px 0 0;
   border-top: 2px solid var(--lagoon);
@@ -52,24 +52,24 @@
   font-weight: 600;
 }
 
-.orbit-label.l2 {
+.step.accent {
   border-color: var(--signal);
 }
 
 @media (max-width: 1000px) {
-  .band-diagram {
+  .diagram {
     width: min(100%, 620px);
     justify-self: start;
   }
 }
 
 @media (max-width: 560px) {
-  .band-diagram {
+  .diagram {
     grid-template-columns: 1fr;
     gap: 12px;
   }
 
-  .diagram-core {
+  .core {
     grid-column: auto;
     flex-direction: column;
     align-items: flex-start;

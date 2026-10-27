@@ -9,7 +9,7 @@
   top: 0;
   min-height: var(--header-height);
   background: rgb(255 255 255 / 96%);
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--border-light);
   backdrop-filter: blur(14px);
 }
 
@@ -45,7 +45,7 @@
   display: inline-flex;
   min-height: 44px;
   align-items: center;
-  color: var(--color-text-secondary);
+  color: var(--text-secondary);
   font-family: 'DM Sans', var(--font-primary);
   font-size: 0.9rem;
   font-weight: 600;
@@ -59,7 +59,7 @@
   bottom: 5px;
   left: 0;
   height: 2px;
-  background: var(--color-secondary);
+  background: var(--secondary);
   content: '';
   transform: scaleX(0);
   transform-origin: left;
@@ -68,7 +68,7 @@
 
 .nav > a.active,
 .nav > a:not(.nav-contact):hover {
-  color: var(--color-primary);
+  color: var(--primary);
 }
 
 .nav > a.active::after,
@@ -84,9 +84,9 @@
   gap: 12px;
   padding: 0 19px;
   border-radius: var(--button-radius);
-  border: 1px solid var(--color-primary);
-  color: var(--color-text-inverse);
-  background: var(--color-primary);
+  border: 1px solid var(--primary);
+  color: var(--text-inverse);
+  background: var(--primary);
   font-family: 'DM Sans', var(--font-primary);
   font-size: 0.9rem;
   font-weight: 600;
@@ -98,9 +98,9 @@
 }
 
 .nav .nav-contact:hover {
-  border-color: var(--color-secondary);
-  color: var(--color-text-inverse);
-  background: var(--color-secondary);
+  border-color: var(--secondary);
+  color: var(--text-inverse);
+  background: var(--secondary);
 }
 
 .nav-contact span {
@@ -139,15 +139,15 @@
     justify-items: center;
     gap: 5px;
     padding: 0;
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--border);
     border-radius: var(--radius-sm);
-    background: var(--color-bg);
+    background: var(--bg);
   }
 
   .menu-toggle span {
     width: 18px;
     height: 2px;
-    background: var(--color-primary);
+    background: var(--primary);
     transition:
       transform var(--transition-fast),
       opacity var(--transition-fast);
@@ -174,8 +174,8 @@
     align-items: stretch;
     gap: 0;
     padding: 8px var(--page-gutter) 20px;
-    border-bottom: 1px solid var(--color-border);
-    background: var(--color-bg);
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
     border-radius: 0 0 var(--radius-md) var(--radius-md);
     box-shadow: var(--shadow-dropdown);
   }
@@ -187,7 +187,7 @@
 
   .nav > a:not(.nav-contact) {
     min-height: 48px;
-    border-bottom: 1px solid var(--color-border-light);
+    border-bottom: 1px solid var(--border-light);
     font-size: 0.98rem;
   }
 

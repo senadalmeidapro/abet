@@ -39,13 +39,13 @@
   color: var(--muted);
   font-size: 0.95rem;
 }
-.values-panel {
+.values {
   background: var(--paper);
 }
-.values-panel .solution-grid {
+.values .solution-grid {
   gap: clamp(30px, 6vw, 84px);
 }
-.values-panel .solution-card {
+.values .solution-card {
   min-height: 0;
   padding: 24px 0 0;
   border: 0;
@@ -54,23 +54,23 @@
   background: transparent;
   box-shadow: none;
 }
-.values-panel .solution-card:hover {
+.values .solution-card:hover {
   border-color: var(--lagoon);
   box-shadow: none;
   transform: none;
 }
-.values-panel .tag {
+.values .tag {
   padding: 0;
   border-radius: 0;
   background: transparent;
   letter-spacing: 0.04em;
 }
-.values-panel .solution-card h3 {
+.values .solution-card h3 {
   max-width: 380px;
   margin: 16px 0 12px;
   font-size: clamp(1.8rem, 2.5vw, 2.5rem);
 }
-.values-panel .solution-card p {
+.values .solution-card p {
   max-width: 400px;
   margin: 0;
 }
@@ -81,7 +81,7 @@
     gap: 30px;
   }
 
-  .values-panel .solution-grid {
+  .values .solution-grid {
     grid-template-columns: 1fr;
     gap: 28px;
   }
@@ -106,7 +106,7 @@
 .about-hero .lead {
   color: #fff;
 }
-.about-hero .page-hero-copy {
+.about-hero .page-copy {
   max-width: 780px;
   margin-inline: 0 auto;
 }
@@ -146,17 +146,17 @@
   grid-template-columns: 14px minmax(0, 1fr);
   padding-block: 24px;
 }
-.values-panel {
+.values {
   background: #fff;
 }
-.values-panel .section-head {
+.values .section-head {
   margin-bottom: 36px;
 }
-.values-panel .solution-grid {
+.values .solution-grid {
   gap: 0;
   border-top: 1px solid var(--line);
 }
-.values-panel .solution-card {
+.values .solution-card {
   min-height: 250px;
   padding: 34px 36px 30px 0;
   border: 0;
@@ -165,11 +165,11 @@
   background: transparent;
   box-shadow: none;
 }
-.values-panel .solution-card + .solution-card {
+.values .solution-card + .solution-card {
   padding-left: 36px;
   border-left: 1px solid var(--line);
 }
-.values-panel .solution-card h3 {
+.values .solution-card h3 {
   color: var(--ocean);
 }
 
@@ -181,8 +181,8 @@
   .about-grid {
     border-radius: 10px;
   }
-  .values-panel .solution-card,
-  .values-panel .solution-card + .solution-card {
+  .values .solution-card,
+  .values .solution-card + .solution-card {
     min-height: 0;
     padding: 24px 0;
     border-left: 0;

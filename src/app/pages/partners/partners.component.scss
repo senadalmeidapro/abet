@@ -1,4 +1,4 @@
-.partners-hero {
+.partner-hero {
   min-height: 390px;
   display: flex;
   align-items: center;
@@ -12,18 +12,18 @@
     ),
     url('/partners.jpg') center 56% / cover;
 }
-.partners-hero h1,
-.partners-hero .lead {
+.partner-hero h1,
+.partner-hero .lead {
   color: #fff;
 }
-.partners-hero .page-hero-copy {
+.partner-hero .page-copy {
   max-width: 770px;
 }
 
 :host {
   display: block;
 }
-:host > .section:not(.final-invitation) {
+:host > .section:not(.contact-cta) {
   background: #fff;
 }
 :host > .section > .section-head h2 {
@@ -36,12 +36,12 @@ app-partner-grid {
   border-radius: 10px;
   background: var(--paper);
 }
-.final-invitation {
+.contact-cta {
   border-radius: 10px;
 }
 
 @media (max-width: 760px) {
-  .partners-hero {
+  .partner-hero {
     min-height: 330px;
     background-position: center;
   }

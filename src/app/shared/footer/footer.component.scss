@@ -6,7 +6,7 @@
   position: relative;
   overflow: hidden;
   color: rgb(255 255 255 / 76%);
-  background: var(--color-bg-dark);
+  background: var(--bg-dark);
 }
 
 .footer-main {
@@ -22,7 +22,7 @@
   display: inline-flex;
   align-items: baseline;
   gap: 9px;
-  color: var(--color-text-inverse);
+  color: var(--text-inverse);
 }
 
 .brand-name {
@@ -33,7 +33,7 @@
 }
 
 .brand-region {
-  color: var(--color-accent);
+  color: var(--accent);
   font-family: 'DM Sans', var(--font-primary);
   font-size: 0.86rem;
   font-weight: 600;
@@ -57,7 +57,7 @@
 .footer-column h2,
 .footer-contact h2 {
   margin: 2px 0 17px;
-  color: var(--color-text-inverse);
+  color: var(--text-inverse);
   font-family: 'DM Sans', var(--font-primary);
   font-size: 0.95rem;
   font-weight: 700;
@@ -75,9 +75,9 @@
 }
 
 .footer-column a:hover {
-  color: var(--color-text-inverse);
+  color: var(--text-inverse);
   text-decoration: underline;
-  text-decoration-color: var(--color-accent);
+  text-decoration-color: var(--accent);
 }
 
 .contact-details {
@@ -103,9 +103,9 @@
 }
 
 .contact-item[href]:hover {
-  color: var(--color-text-inverse);
+  color: var(--text-inverse);
   text-decoration: underline;
-  text-decoration-color: var(--color-accent);
+  text-decoration-color: var(--accent);
 }
 
 .contact-icon {
@@ -113,7 +113,7 @@
   height: 19px;
   margin-top: 2px;
   flex: none;
-  stroke: var(--color-accent);
+  stroke: var(--accent);
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.6;

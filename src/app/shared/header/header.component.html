@@ -15,23 +15,13 @@
       <span></span>
     </button>
 
-    <nav
-      id="primary-navigation"
-      class="nav"
-      [class.open]="menuOpen"
-    >
+    <nav id="primary-navigation" class="nav" [class.open]="menuOpen">
       @for (item of nav; track item.path) {
-        <a
-          [routerLink]="item.path"
-          [class.active]="isActive(item.path)"
-          (click)="menuOpen = false"
-        >
+        <a [routerLink]="item.path" [class.active]="isActive(item.path)" (click)="menuOpen = false">
           {{ item.label }}
         </a>
       }
-      <a class="nav-contact" routerLink="/contact" (click)="menuOpen = false">
-        Contact
-      </a>
+      <a class="nav-contact" routerLink="/contact" (click)="menuOpen = false"> Contact </a>
     </nav>
   </div>
 </header>

@@ -57,7 +57,7 @@
   max-height: 74px;
 }
 
-.logo-best-for-africa {
+.logo-bfa {
   width: min(100%, 198px);
   height: 84px;
   object-fit: cover;
@@ -68,7 +68,7 @@
   max-height: 100px;
 }
 
-.logo-data-protect {
+.logo-data {
   max-width: min(100%, 230px);
   max-height: 66px;
 }
@@ -93,13 +93,13 @@
   .logo-togo,
   .logo-rdc,
   .logo-airudi,
-  .logo-best-for-africa,
+  .logo-bfa,
   .logo-hairun,
-  .logo-data-protect {
+  .logo-data {
     max-height: 72px;
   }
 
-  .logo-best-for-africa {
+  .logo-bfa {
     height: 72px;
   }
 }

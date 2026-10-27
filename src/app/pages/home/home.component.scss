@@ -14,13 +14,13 @@
   background: #0b253d;
 }
 
-.home-img {
+.hero-img {
   position: absolute;
   inset: 0;
   z-index: -2;
 }
 
-.home-img img {
+.hero-img img {
   display: block;
   width: 100%;
   height: 100%;
@@ -69,7 +69,7 @@
   color: #fff;
 }
 
-.expertise-section {
+.expertise {
   display: grid;
   grid-template-columns: minmax(250px, 0.72fr) minmax(0, 1.28fr);
   grid-template-areas:
@@ -80,20 +80,20 @@
   background: var(--paper);
 }
 
-.expertise-section .section-head {
+.expertise .section-head {
   display: block;
   grid-area: intro;
   margin: 0;
 }
 
-.expertise-section .section-head h2 {
+.expertise .section-head h2 {
   max-width: 410px;
   margin: 0;
   font-size: clamp(2.6rem, 4.3vw, 4.25rem);
   line-height: 0.98;
 }
 
-.expertise-section .sector-list {
+.expertise .sector-list {
   display: grid;
   grid-area: list;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -102,7 +102,7 @@
   border-top: 1px solid var(--ink);
 }
 
-.expertise-section .sector-list > div {
+.expertise .sector-list > div {
   min-height: 124px;
   grid-template-columns: minmax(0, 1fr);
   align-content: start;
@@ -111,47 +111,47 @@
   border-bottom: 1px solid var(--line);
 }
 
-.expertise-section .sector-list b {
+.expertise .sector-list b {
   padding: 0;
   font-size: 1.35rem;
 }
 
-.expertise-section .sector-list small {
+.expertise .sector-list small {
   font-size: 0.94rem;
   line-height: 1.48;
 }
 
-.expertise-section .section-link {
+.expertise .section-link {
   grid-area: cta;
   justify-content: flex-start;
   margin: 4px 0 0;
 }
 
-.expertise-section .section-link a {
+.expertise .section-link a {
   padding-bottom: 5px;
   border-bottom: 1px solid var(--signal);
 }
 
-.solutions-section {
+.solutions {
   background: #fff;
 }
 
-.solutions-section .section-head {
+.solutions .section-head {
   grid-template-columns: 1fr;
   margin-bottom: clamp(34px, 5vw, 58px);
 }
 
-.solutions-section .section-head h2 {
+.solutions .section-head h2 {
   max-width: 720px;
   font-size: clamp(2.8rem, 4.5vw, 4.5rem);
 }
 
-.solutions-section .solution-grid {
+.solutions .solution-grid {
   grid-template-columns: 1fr;
   gap: 18px;
 }
 
-.proof-band {
+.mission {
   display: grid;
   grid-template-columns: minmax(150px, 0.38fr) minmax(0, 1.45fr) auto;
   align-items: center;
@@ -161,18 +161,18 @@
   background: #f7fafb;
 }
 
-.proof-band h2 {
+.mission h2 {
   margin: 0;
   font-size: clamp(1.8rem, 2.6vw, 2.6rem);
 }
 
-.proof-band > p {
+.mission > p {
   max-width: 760px;
   margin: 0;
   color: var(--muted);
 }
 
-.proof-band > a {
+.mission > a {
   font-weight: 700;
   white-space: nowrap;
 }
@@ -182,7 +182,7 @@
     min-height: 620px;
   }
 
-  .expertise-section {
+  .expertise {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
       'intro'
@@ -191,15 +191,15 @@
     gap: 30px;
   }
 
-  .expertise-section .section-head h2 {
+  .expertise .section-head h2 {
     max-width: 610px;
   }
 
-  .proof-band {
+  .mission {
     grid-template-columns: minmax(130px, 0.4fr) minmax(0, 1fr);
   }
 
-  .proof-band > a {
+  .mission > a {
     grid-column: 2;
   }
 }
@@ -210,7 +210,7 @@
     padding: 64px var(--page-gutter) 58px;
   }
 
-  .home-img img {
+  .hero-img img {
     object-position: 58% center;
   }
 
@@ -227,22 +227,22 @@
     font-size: clamp(2.8rem, 11vw, 4.5rem);
   }
 
-  .expertise-section .sector-list {
+  .expertise .sector-list {
     grid-template-columns: 1fr;
   }
 
-  .expertise-section .sector-list > div {
+  .expertise .sector-list > div {
     min-height: 0;
     padding-block: 16px;
   }
 
-  .proof-band {
+  .mission {
     grid-template-columns: 1fr;
     gap: 16px;
     padding: 36px var(--page-gutter);
   }
 
-  .proof-band > a {
+  .mission > a {
     grid-column: auto;
   }
 }
@@ -317,81 +317,81 @@
   pointer-events: none;
 }
 
-.expertise-section {
+.expertise {
   position: relative;
   overflow: hidden;
   color: #fff;
   background: var(--ink);
 }
 
-.expertise-section .section-head h2,
-.expertise-section .sector-list b {
+.expertise .section-head h2,
+.expertise .sector-list b {
   color: #fff;
 }
 
-.expertise-section .sector-list {
+.expertise .sector-list {
   position: relative;
   z-index: 1;
   border-color: rgb(255 255 255 / 32%);
 }
 
-.expertise-section .sector-list > div {
+.expertise .sector-list > div {
   position: relative;
   border-color: rgb(255 255 255 / 17%);
 }
 
-.expertise-section .sector-list small {
+.expertise .sector-list small {
   color: #bdcfdb;
 }
 
-.expertise-section .section-link,
-.expertise-section .section-head {
+.expertise .section-link,
+.expertise .section-head {
   position: relative;
   z-index: 1;
 }
 
-.expertise-section .section-link a {
+.expertise .section-link a {
   border-color: var(--signal);
   color: #fff;
 }
 
-.solutions-section {
+.solutions {
   background: var(--paper);
 }
 
-.proof-band {
+.mission {
   border: 0;
   color: #fff;
   background: var(--ocean);
 }
 
-.proof-band h2 {
+.mission h2 {
   color: #fff;
 }
 
-.proof-band > p {
+.mission > p {
   color: #d9e7ef;
 }
 
-.proof-band > a {
+.mission > a {
   color: #fff;
 }
 
-.final-invitation {
+.contact-cta {
   border: 0;
   color: #fff;
   background: var(--ink);
 }
 
-.final-invitation h2 {
+.contact-cta h2 {
   color: #fff;
 }
 
-.final-invitation > div > p:last-child {
+.contact-cta > div > p:last-child {
   color: #c4d4de;
 }
 
-.final-invitation .button {
+.contact-cta .button {
 }
 
 @media (max-width: 760px) {
@@ -404,11 +404,11 @@
   }
 
   .home-hero .hero-copy::after,
-  .expertise-section::after {
+  .expertise::after {
     display: none;
   }
 
-  .expertise-section {
+  .expertise {
     gap: 25px;
   }
 }

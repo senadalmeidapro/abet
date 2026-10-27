@@ -22,9 +22,9 @@ export class PartnerGridComponent {
     {
       name: 'Best For Africa Group',
       src: '/bfa_mspo%20(1).png',
-      logoClass: 'logo-best-for-africa',
+      logoClass: 'logo-bfa',
     },
     { name: 'HAIRUN', src: '/logo_hairun.png', logoClass: 'logo-hairun' },
-    { name: 'DATA PROTECT', src: '/dataprotect_logo.png', logoClass: 'logo-data-protect' },
+    { name: 'DATA PROTECT', src: '/dataprotect_logo.png', logoClass: 'logo-data' },
   ];
 }

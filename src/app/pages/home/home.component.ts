@@ -7,12 +7,7 @@ import { PartnerGridComponent } from '../../shared/partner-grid/partner-grid.com
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [
-    HomeDiagramComponent,
-    HomeSolutionCardComponent,
-    PartnerGridComponent,
-    RouterLink,
-  ],
+  imports: [HomeDiagramComponent, HomeSolutionCardComponent, PartnerGridComponent, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
