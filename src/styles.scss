@@ -173,9 +173,6 @@ textarea:focus-visible {
   border-color: var(--color-border-focus);
   box-shadow: var(--input-focus-ring);
 }
-input[aria-invalid='true'],
-select[aria-invalid='true'],
-textarea[aria-invalid='true'],
 input:user-invalid,
 select:user-invalid,
 textarea:user-invalid {
@@ -286,8 +283,7 @@ small {
   transform: translateY(0);
   box-shadow: var(--shadow-xs);
 }
-.button:disabled,
-.button[aria-disabled='true'] {
+.button:disabled {
   transform: none;
   box-shadow: none;
   opacity: 0.58;

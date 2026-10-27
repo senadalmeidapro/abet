@@ -153,15 +153,15 @@
       opacity var(--transition-fast);
   }
 
-  .menu-toggle[aria-expanded='true'] span:first-child {
+  .menu-toggle.is-open span:first-child {
     transform: translateY(7px) rotate(45deg);
   }
 
-  .menu-toggle[aria-expanded='true'] span:nth-child(2) {
+  .menu-toggle.is-open span:nth-child(2) {
     opacity: 0;
   }
 
-  .menu-toggle[aria-expanded='true'] span:last-child {
+  .menu-toggle.is-open span:last-child {
     transform: translateY(-7px) rotate(-45deg);
   }
 

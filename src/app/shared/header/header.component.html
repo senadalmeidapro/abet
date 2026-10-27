@@ -1,6 +1,6 @@
 <header class="header">
   <div class="header-inner">
-    <a class="brand" routerLink="/" aria-label="ABET for Africa, accueil">
+    <a class="brand" routerLink="/">
       <img src="/logo_abet_head2.png" alt="ABET for Africa" />
     </a>
 
@@ -8,9 +8,7 @@
       class="menu-toggle"
       type="button"
       (click)="menuOpen = !menuOpen"
-      [attr.aria-expanded]="menuOpen"
-      aria-controls="primary-navigation"
-      [attr.aria-label]="menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'"
+      [class.is-open]="menuOpen"
     >
       <span></span>
       <span></span>
@@ -21,13 +19,11 @@
       id="primary-navigation"
       class="nav"
       [class.open]="menuOpen"
-      aria-label="Navigation principale"
     >
       @for (item of nav; track item.path) {
         <a
           [routerLink]="item.path"
           [class.active]="isActive(item.path)"
-          [attr.aria-current]="isActive(item.path) ? 'page' : null"
           (click)="menuOpen = false"
         >
           {{ item.label }}
