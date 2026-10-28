@@ -45,17 +45,20 @@
 .home-hero .hero-copy {
   position: relative;
   z-index: 1;
-  width: min(100%, 1000px);
+  width: 100%;
+  max-width: 940px;
 }
 
 .home-hero h1 {
-  min-width: 1000px;
+  width: 100%;
+  max-width: 800px;
   margin: 0 0 24px;
   color: #fff;
   font-size: clamp(3.4rem, 6.8vw, 6.3rem);
 }
 
 .home-hero .lead {
+  width: 100%;
   max-width: 800px;
   margin: 0;
   color: #d0dfe7;
@@ -178,6 +181,18 @@
 }
 
 @media (max-width: 1000px) {
+  .home-hero .hero-copy {
+    max-width: 760px;
+  }
+
+  .home-hero h1 {
+    max-width: 760px;
+  }
+
+  .home-hero .lead {
+    max-width: 680px;
+  }
+
   .home-hero.hero {
     min-height: 620px;
   }
@@ -205,6 +220,12 @@
 }
 
 @media (max-width: 760px) {
+  .home-hero .hero-copy,
+  .home-hero h1,
+  .home-hero .lead {
+    max-width: 100%;
+  }
+
   .home-hero.hero {
     min-height: 0;
     padding: 64px var(--page-gutter) 58px;
@@ -274,7 +295,6 @@
 }
 
 .home-hero .hero-copy {
-  width: min(100%, 940px);
   padding-left: clamp(0px, 2.2vw, 28px);
 }
 
