@@ -11,25 +11,77 @@
   </div>
 </section>
 
-<section class="section contact-details">
-  <div class="section-head">
-    <div>
-      <h2>Contactez ABET</h2>
+<section class="section contact-form-section">
+  <div class="contact-form-intro">
+    <h2>Contactez-Nous</h2>
+    <p>Écrivez-nous pour toute demande concernant nos activités et nos solutions.</p>
+    <div class="service-grid">
+      <article>
+        <span>LOCALISATION</span>
+        <h3>Nad Al Sheba, Meydan City</h3>
+        <p>Dubaï, Émirats arabes unis</p>
+      </article>
+      <article>
+        <span>TÉLÉPHONE</span>
+        <h3><a href="tel:+971585778337">(+971) 585-778-337</a></h3>
+      </article>
+      <article>
+        <span>ADRESSE MAIL</span>
+        <h3><a href="mailto:contact@abetforafrica.com">contact&#64;abetforafrica.com</a></h3>
+      </article>
     </div>
   </div>
-  <div class="service-grid">
-    <article>
-      <span>LOCALISATION</span>
-      <h3>Nad Al Sheba, Meydan City</h3>
-      <p>Dubaï, Émirats arabes unis</p>
-    </article>
-    <article>
-      <span>TÉLÉPHONE</span>
-      <h3><a href="tel:+971585778337">(+971) 585-778-337</a></h3>
-    </article>
-    <article>
-      <span>ADRESSE MAIL</span>
-      <h3><a href="mailto:contact@abetforafrica.com">contact&#64;abetforafrica.com</a></h3>
-    </article>
-  </div>
+  <form class="contact-form" (submit)="sendMessage($event)">
+    <div class="form-field">
+      <label for="contact-name">Nom et prénom</label>
+      <input
+        id="contact-name"
+        name="name"
+        type="text"
+        placeholder="Entrez votre nom et prénom"
+        required
+      />
+    </div>
+    <div class="form-field">
+      <label for="contact-email">Email</label>
+      <input
+        id="contact-email"
+        name="email"
+        type="email"
+        placeholder="Entrez votre Email"
+        required
+      />
+    </div>
+    <div class="form-field">
+      <label for="contact-phone">Téléphone</label>
+      <input
+        id="contact-phone"
+        name="phone"
+        type="tel"
+        placeholder="Entrez votre numéro de téléphone"
+        required
+      />
+    </div>
+    <div class="form-field">
+      <label for="contact-subject">Sujet</label>
+      <input
+        id="contact-subject"
+        name="subject"
+        type="text"
+        placeholder="Entrez le sujet"
+        required
+      />
+    </div>
+    <div class="form-field form-message">
+      <label for="contact-message">Message</label>
+      <textarea
+        id="contact-message"
+        name="message"
+        rows="6"
+        placeholder="Entrez votre message"
+        required
+      ></textarea>
+    </div>
+    <button class="button primary form-submit" type="submit">Envoyer</button>
+  </form>
 </section>

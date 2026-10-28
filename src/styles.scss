@@ -69,7 +69,6 @@ body {
   background: #fff;
   font-family: var(--font-primary);
   font-size: 17px;
-  line-height: 1.62;
   -webkit-font-smoothing: antialiased;
 }
 button,
@@ -79,14 +78,6 @@ textarea {
   font: inherit;
 }
 
-input,
-select,
-textarea {
-  transition:
-    border-color var(--transition-fast),
-    box-shadow var(--transition-fast),
-    background-color var(--transition-fast);
-}
 button {
   cursor: pointer;
 }
@@ -113,19 +104,10 @@ a {
 a:hover {
   color: var(--link-hover);
 }
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-  outline: var(--focus-outline);
-  outline-offset: var(--focus-offset);
-}
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
   border-color: var(--border-focus);
-  box-shadow: var(--input-focus-ring);
 }
 input:user-invalid,
 select:user-invalid,
