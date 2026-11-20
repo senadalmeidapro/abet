@@ -5,13 +5,13 @@
 .home-hero.hero {
   position: relative;
   display: flex;
-  min-height: clamp(560px, 72vh, 730px);
+  min-height: clamp(620px, 82vh, 820px);
   align-items: center;
   isolation: isolate;
   overflow: hidden;
   padding: clamp(56px, 8vw, 104px) var(--section-gutter);
   color: #fff;
-  background: #0b253d;
+  background: var(--ink);
 }
 
 .hero-img {
@@ -32,12 +32,14 @@
   position: absolute;
   z-index: -1;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgb(11 37 61 / 94%) 0%,
-    rgb(11 37 61 / 78%) 46%,
-    rgb(11 37 61 / 22%) 100%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      rgb(16 42 67 / 96%) 0%,
+      rgb(16 42 67 / 78%) 42%,
+      rgb(16 42 67 / 8%) 100%
+    ),
+    linear-gradient(0deg, rgb(16 42 67 / 42%), transparent 42%);
   content: '';
   pointer-events: none;
 }
@@ -47,6 +49,7 @@
   z-index: 1;
   width: 100%;
   max-width: 940px;
+  padding-left: clamp(0px, 2.2vw, 28px);
 }
 
 .home-hero h1 {
@@ -54,7 +57,8 @@
   max-width: 800px;
   margin: 0 0 24px;
   color: #fff;
-  font-size: clamp(3.4rem, 6.8vw, 6.3rem);
+  font-size: clamp(3.8rem, 7.7vw, 7.1rem);
+  line-height: 0.88;
 }
 
 .home-hero .lead {
@@ -68,8 +72,24 @@
   margin-top: 34px;
 }
 
+.home-hero .button.primary {
+  border-color: var(--signal);
+  color: var(--ink);
+  background: var(--signal);
+}
+
+.home-hero .button.primary:hover {
+  border-color: #f2c574;
+  color: var(--ink);
+  background: #f2c574;
+}
+
 .home-hero .text-button {
   color: #fff;
+}
+
+.home-hero .text-button:hover {
+  background: rgb(255 255 255 / 12%);
 }
 
 .expertise {
@@ -277,53 +297,6 @@
     width: auto;
   }
 }
-
-.home-hero.hero {
-  min-height: clamp(620px, 82vh, 820px);
-  background: var(--ink);
-}
-
-.home-hero::after {
-  background:
-    linear-gradient(
-      90deg,
-      rgb(16 42 67 / 96%) 0%,
-      rgb(16 42 67 / 78%) 42%,
-      rgb(16 42 67 / 8%) 100%
-    ),
-    linear-gradient(0deg, rgb(16 42 67 / 42%), transparent 42%);
-}
-
-.home-hero .hero-copy {
-  padding-left: clamp(0px, 2.2vw, 28px);
-}
-
-.home-hero h1 {
-  max-width: 800px;
-  font-size: clamp(3.8rem, 7.7vw, 7.1rem);
-  line-height: 0.88;
-}
-
-.home-hero .button.primary {
-  border-color: var(--signal);
-  color: var(--ink);
-  background: var(--signal);
-}
-
-.home-hero .button.primary:hover {
-  border-color: #f2c574;
-  color: var(--ink);
-  background: #f2c574;
-}
-
-.home-hero .text-button {
-  color: #fff;
-}
-
-.home-hero .text-button:hover {
-  background: rgb(255 255 255 / 12%);
-}
-
 
 .expertise {
   position: relative;

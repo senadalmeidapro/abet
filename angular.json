@@ -29,7 +29,8 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"]
+            "styles": ["node_modules/aos/dist/aos.css", "src/styles.scss"],
+            "allowedCommonJsDependencies": ["aos"]
           },
           "configurations": {
             "production": {
@@ -46,7 +47,7 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
+                  "maximumWarning": "6kB",
                   "maximumError": "8kB"
                 }
               ],

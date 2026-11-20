@@ -48,7 +48,8 @@
 }
 
 .footer-column h2,
-.footer-contact h2 {
+.footer-contact h2,
+.footer-social h2 {
   margin: 2px 0 17px;
   color: var(--text-inverse);
   font-family: 'DM Sans', var(--font-primary);
@@ -67,10 +68,35 @@
     text-decoration-color var(--transition-fast);
 }
 
-.footer-column a:hover {
+.footer-column a:hover,
+.social-link:hover {
   color: var(--text-inverse);
   text-decoration: underline;
   text-decoration-color: var(--accent);
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 22px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgb(255 255 255 / 70%);
+  font-size: 0.9rem;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+  transition: color var(--transition-fast);
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+  flex: none;
 }
 
 .contact-details {
@@ -134,6 +160,24 @@
   border-top: 1px solid rgb(255 255 255 / 14%);
   color: rgb(255 255 255 / 58%);
   font-size: 0.8rem;
+}
+
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
+.footer-legal a {
+  color: inherit;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+}
+
+.footer-legal a:hover {
+  color: var(--text-inverse);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
 }
 
 @media (max-width: 900px) {

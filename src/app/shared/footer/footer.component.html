@@ -18,6 +18,7 @@
       <a routerLink="/services">Domaines d’activités</a>
       <a routerLink="/solutions">Nos Solutions</a>
       <a routerLink="/partenaires">Partenaires</a>
+      <a routerLink="/equipe">Équipe</a>
       <a routerLink="/contact">Contact</a>
     </nav>
 
@@ -26,7 +27,7 @@
       <a routerLink="/solutions/iacd-eez-scanner">
         Intelligent Advanced Cargo Declaration &amp; Exclusive Economic Zone Scanner
       </a>
-      <a routerLink="/solutions/registre-carbone">Africa Blue Port and Airport Carbone Registry</a>
+      <a routerLink="/solutions/registre-carbone">Africa Blue &amp; Green Environmental Registry</a>
     </nav>
 
     <div class="footer-contact">
@@ -59,10 +60,32 @@
           <span class="contact-copy">(+971) 585-778-337</span>
         </a>
       </address>
+      <div class="footer-social">
+        <h2>Nous suivre</h2>
+        @for (social of socials; track social.label) {
+          <a
+            class="social-link"
+            [href]="social.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            [attr.aria-label]="'ABET for Africa sur ' + social.label"
+          >
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path [attr.d]="social.iconPath" />
+            </svg>
+            <span>{{ social.label }}</span>
+          </a>
+        }
+      </div>
     </div>
   </div>
 
   <div class="footer-bottom">
     <span>© {{ year }} ABETM - Tous droits réservés.</span>
+    <nav class="footer-legal" aria-label="Informations légales">
+      <a routerLink="/mentions-legales">Mentions légales</a>
+      <a routerLink="/politique-de-confidentialite">Confidentialité</a>
+      <a routerLink="/conditions-d-utilisation">Conditions d’utilisation</a>
+    </nav>
   </div>
 </footer>

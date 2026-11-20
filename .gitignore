@@ -29,6 +29,11 @@ yarn-error.log
 !.vscode/mcp.json
 .history/*
 
+# Environment and Python
+.env.local
+.env.*.local
+__pycache__/
+
 # Miscellaneous
 /.angular/cache
 .sass-cache/

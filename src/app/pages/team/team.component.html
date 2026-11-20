@@ -1,0 +1,29 @@
+<section class="page-hero team-hero">
+  <div class="page-copy">
+    <h1>Notre équipe</h1>
+    <p class="lead">Découvrez les femmes et les hommes qui portent la vision d’ABET for Africa.</p>
+  </div>
+</section>
+
+@if (members.length) {
+  <section class="section team-content" data-aos="fade-up" data-aos-duration="700">
+    <div class="team-grid">
+      @for (member of members; track $index) {
+        <article class="team-card">
+          <img
+            class="team-photo"
+            [src]="member.photo"
+            [alt]="'Portrait de ' + member.name"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="team-card-body">
+            <h2>{{ member.name }}</h2>
+            <p class="team-role">{{ member.role }}</p>
+            <p class="team-bio">{{ member.bio }}</p>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+}

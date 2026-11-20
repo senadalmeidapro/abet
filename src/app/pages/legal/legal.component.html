@@ -1,0 +1,24 @@
+<section class="page-hero legal-hero">
+  <div class="page-copy">
+    <h1>{{ page.title }}</h1>
+    <p class="lead">{{ page.lead }}</p>
+  </div>
+</section>
+
+<section class="section legal-content" data-aos="fade-up" data-aos-duration="700">
+  @for (section of page.sections; track section.heading) {
+    <article class="legal-block">
+      <h2>{{ section.heading }}</h2>
+      @for (paragraph of section.paragraphs; track $index) {
+        <p>{{ paragraph }}</p>
+      }
+      @if (section.items?.length) {
+        <ul>
+          @for (item of section.items; track $index) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+      }
+    </article>
+  }
+</section>

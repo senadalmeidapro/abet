@@ -1,13 +1,34 @@
 <div class="partner-grid" [class.compact]="compact">
   @for (partner of partners; track partner.name) {
-    <div class="partner-cell">
-      <img
-        [class]="'partner-logo ' + partner.logoClass"
-        [src]="partner.src"
-        [alt]="partner.name"
-        loading="lazy"
-        decoding="async"
-      />
-    </div>
+    <article class="partner-cell">
+      @if (partner.url) {
+        <a
+          class="partner-logo-link"
+          [href]="partner.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          [attr.aria-label]="partner.name + ' — site officiel'"
+        >
+          <img
+            [class]="'partner-logo ' + partner.logoClass"
+            [src]="partner.src"
+            [alt]="'Logo de ' + partner.name"
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+      } @else {
+        <img
+          [class]="'partner-logo ' + partner.logoClass"
+          [src]="partner.src"
+          [alt]="'Logo de ' + partner.name"
+          loading="lazy"
+          decoding="async"
+        />
+      }
+      @if (!compact && partner.description) {
+        <p class="partner-description">{{ partner.description }}</p>
+      }
+    </article>
   }
 </div>

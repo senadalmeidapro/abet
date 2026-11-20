@@ -1,0 +1,24 @@
+:host {
+  display: block;
+}
+
+.legal-hero {
+  background: var(--paper);
+}
+
+.legal-content {
+  display: grid;
+  width: min(100%, 860px);
+  gap: clamp(24px, 3vw, 38px);
+  margin-inline: auto;
+}
+
+.legal-block h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.5rem, 2.3vw, 2rem);
+}
+
+.legal-block p {
+  color: var(--muted);
+  line-height: 1.7;
+}

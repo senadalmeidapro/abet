@@ -1,0 +1,29 @@
+# Questions à poser au client — ABET for Africa
+
+> Les points en attente et les blocages sont centralisés dans `A_CONFIRMER.md`, sans affichage sur le site.
+
+1. **C1 (J1)** — Quel est le nom exact à utiliser partout : « ABET for Africa », « Africa Blue Economy and Traffic Management LLC » ou « ABETM » ? Quel est le nom officiel du registre carbone et du scanner IACD & EEZ Scanner ? Faut-il écrire « trafic » ou « traffic » ?
+2. **C4 (J1)** — Quelle est l'URL exacte du compte LinkedIn officiel ? Y a-t-il d'autres réseaux sociaux à afficher dans le pied de page ?
+3. **C2 (J2)** — Comment le formulaire de contact doit-il envoyer les messages : vers la boîte `contact@abetforafrica.com`, via un service tiers (Resend, Brevo, Formspree…) ou via une API interne ? Qui reçoit les copies ? Faut-il un accusé de réception automatique, un anti-spam et une politique de conservation des données ?
+4. **C5 (J3 / J7)** — Quelles sont les informations légales complètes : dénomination sociale, forme juridique, numéro d'immatriculation, adresse postale, numéro de TVA, dirigeant, hébergeur et DPO ? Quelles accréditations et autorisations détenez-vous (organisme, numéro, portée, dates, justificatifs) pour la vérification indépendante et le registre carbone ? Disposez-vous déjà de textes de mentions légales, de politique de confidentialité et de conditions d'utilisation ?
+5. **C3 (J4)** — Quelle est la liste des membres de l'équipe avec, pour chacun : nom, rôle, parcours, photo haute définition et autorisation de publication ?
+6. **C7 (J5)** — Pour chacun des six partenaires, quel est le site web (URL exacte), la nature exacte de la collaboration en une ligne, le logo vectoriel et l'autorisation de publication ?
+7. **C6 (J6)** — Quelle méthode de validation et quelles conditions de mesure appuient les affirmations de précision du site ? Acceptez-vous de remplacer « intégrité absolue », « infalsifiable », « conformité garantie », « sans audits physiques » et « 100 % hébergée localement » par des formulations nuancées ?
+8. **C11 (J7)** — Quels sont les marchés prioritaires, les types de clients cibles et les trois avantages concrets d'ABET face à la concurrence ?
+9. **C10 (J9 / phase 2)** — Quel domaine canonique retenir : `abetforafrica.com` ou `www.abetforafrica.com` ? Disposez-vous d'un accès à Google Search Console ? Autorisez-vous l'auto-hébergement des polices Google ?
+10. **C8 (phase 2)** — Qui fournit et relit professionnellement la traduction anglaise ? Préférez-vous une version `/en` ou un domaine séparé ? Faut-il traduire également les pages légales et les e-mails ?
+11. **C9 (phase 2)** — Faut-il un CMS administrable ? Quels contenus doivent pouvoir être modifiés (menu, partenaires, pied de page, domaines d'activité, formulaire) ? Quel budget et quel hébergeur sont prévus pour cette partie ?
+
+## Réponses provisoires reçues (à confirmer en cours de route)
+
+1. **C1** — Nom commercial : ABET for Africa. Dénomination affichée : Africa Blue Economy and Traffic Management LLC. Sigle : ABETM. Registre carbone : provisoirement Africa Blue & Green Environmental Registry, sous réserve de confirmation. « Traffic » en anglais, « Trafic » en français. À confirmer : le nom définitif du registre carbone.
+2. **C4** — LinkedIn affiché dans le pied de page avec son logo officiel et un lien temporaire vers linkedin.com ; Facebook, Instagram et X sont commentés avec leurs logos officiels. À fournir : l'URL du profil ou de la page entreprise LinkedIn, puis les URLs officielles des autres réseaux avant activation.
+3. **C2** — Envoyer tous les messages à `contact@abetforafrica.com` via Resend et afficher une confirmation après l'envoi. À confirmer : que cette boîte est bien la réception principale.
+4. **C5** — Pages Mentions légales, Politique de confidentialité et Conditions d'utilisation créées ; les champs non fournis sont marqués « À compléter » ; aucune accréditation n'est publiée sans justificatif. À fournir : forme juridique, immatriculation, siège, TVA, dirigeant, hébergeur, DPO, durée de conservation, droit applicable et justificatifs d'accréditation.
+5. **C3** — Page Équipe créée (`/equipe`) avec des cartes uniformes photo / nom / fonction / courte biographie et des placeholders. À fournir : la liste des membres et leurs photos.
+6. **C7** — Grille des six partenaires mise à jour avec prise en charge des logos cliquables et des courtes descriptions (placeholders). À confirmer : que les six partenaires affichés sont toujours officiels ; à fournir : leurs URL et descriptions.
+7. **C6** — Remplacer les affirmations absolues par des formulations mesurées : « intégrité absolue » → « renforcement de l'intégrité des données » ; « infalsifiable » → « traçabilité sécurisée des données » ; « conformité garantie » → « accompagnement à la conformité réglementaire ». Ne pas annoncer de précision chiffrée sans preuve.
+8. **C11** — Marchés prioritaires, clients cibles et 3 avantages provisoires intégrés aux pages `solutions`, `maritime` et `carbon-registry`. Marchés : maritime et portuaire, aérien et aéroportuaire, environnemental et carbone. Clients : gouvernements, autorités portuaires, autorités aéroportuaires et institutions publiques. Avantages : technologies intégrées, expertise multisectorielle, solutions adaptées aux enjeux africains. À confirmer : que ces marchés correspondent aux priorités commerciales d'ABET.
+9. **C8** — Créer une version `/en`, ajouter un sélecteur FR / EN dans le menu, traduire toutes les pages y compris les pages légales et faire relire avant publication. La traduction est préparée par l'équipe projet ; à prévoir : validation finale par l'équipe ABET.
+10. **C10** — Aucune réponse pour le moment : domaine canonique, accès Google Search Console et autorisation d'auto-héberger les polices restent à préciser.
+11. **C9** — Aucune réponse pour le moment : besoin CMS, contenus à administrer, budget et hébergeur restent à préciser.
