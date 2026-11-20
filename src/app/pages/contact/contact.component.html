@@ -1,7 +1,7 @@
-<section class="page-hero contact-hero">
+<section class="page-hero page-hero--flat contact-hero">
   <div class="page-copy">
     <h1>Contactez-nous</h1>
-    <p class="lead">Africa Blue Economy and Traffic Management LLC</p>
+    <p class="lead on-dark">Africa Blue Economy and Traffic Management LLC</p>
     <div class="actions">
       <a class="button primary" href="mailto:contact@abetforafrica.com"
         >contact&#64;abetforafrica.com</a
@@ -12,11 +12,11 @@
 </section>
 
 <section class="section contact-form-section">
-  <div class="contact-form-intro">
+  <div class="contact-form-intro" data-aos="fade-up">
     <h2>Contactez-Nous</h2>
     <p>Écrivez-nous pour toute demande concernant nos activités et nos solutions.</p>
 
-    <div class="service-grid">
+    <div class="service-grid" data-aos="fade-up" data-aos-delay="100">
       <article>
         <span>LOCALISATION</span>
         <h3>Nad Al Sheba, Meydan City</h3>
@@ -32,7 +32,14 @@
       </article>
     </div>
   </div>
-  <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+  <form
+    class="contact-form"
+    [formGroup]="contactForm"
+    (ngSubmit)="onSubmit()"
+    novalidate
+    data-aos="fade-left"
+    data-aos-delay="100"
+  >
     @if (status === 'success') {
       <p class="form-status success" role="status">Votre message a bien été envoyé.</p>
     }

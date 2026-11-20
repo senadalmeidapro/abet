@@ -1,7 +1,3 @@
-.video-section {
-  background: var(--paper);
-}
-
 .section > p {
   max-width: 630px;
   color: var(--muted);
@@ -12,35 +8,8 @@
   max-width: 850px;
 }
 
-.video-section app-video {
-  margin-top: 34px;
-}
-
 .maritime-hero {
-  min-height: 540px;
-  display: flex;
-  align-items: center;
-  color: #fff;
-  background:
-    linear-gradient(
-      90deg,
-      rgb(16 42 67 / 96%) 0%,
-      rgb(16 42 67 / 86%) 44%,
-      rgb(16 42 67 / 12%) 100%
-    ),
-    url('/surveillance.jpg') center 42% / cover;
-}
-.maritime-hero h1,
-.maritime-hero .lead {
-  color: #fff;
-}
-.maritime-hero .page-copy {
-  max-width: 810px;
-}
-.maritime-hero .button.primary {
-  border-color: var(--signal);
-  color: var(--ink);
-  background: var(--signal);
+  --hero-image: url('/surveillance.jpg');
 }
 
 .intro {
@@ -87,10 +56,6 @@
 }
 
 @media (max-width: 760px) {
-  .maritime-hero {
-    min-height: 440px;
-    background-position: 62% center;
-  }
   .intro {
     grid-template-columns: 1fr;
     gap: 20px;

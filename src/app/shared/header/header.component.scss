@@ -46,7 +46,7 @@
   min-height: 44px;
   align-items: center;
   color: var(--text-secondary);
-  font-family: 'DM Sans', var(--font-primary);
+  font-family: var(--font-primary);
   font-size: 0.9rem;
   font-weight: 600;
   white-space: nowrap;
@@ -87,7 +87,7 @@
   border: 1px solid var(--primary);
   color: var(--text-inverse);
   background: var(--primary);
-  font-family: 'DM Sans', var(--font-primary);
+  font-family: var(--font-primary);
   font-size: 0.9rem;
   font-weight: 600;
   white-space: nowrap;

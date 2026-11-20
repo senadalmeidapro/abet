@@ -1,15 +1,17 @@
-<section class="page-hero team-hero">
+<section class="page-hero page-hero--flat team-hero">
   <div class="page-copy">
     <h1>Notre équipe</h1>
-    <p class="lead">Découvrez les femmes et les hommes qui portent la vision d’ABET for Africa.</p>
+    <p class="lead on-dark">
+      Découvrez les femmes et les hommes qui portent la vision d’ABET for Africa.
+    </p>
   </div>
 </section>
 
 @if (members.length) {
-  <section class="section team-content" data-aos="fade-up" data-aos-duration="700">
+  <section class="section team-content">
     <div class="team-grid">
       @for (member of members; track $index) {
-        <article class="team-card">
+        <article class="team-card" data-aos="fade-up" [attr.data-aos-delay]="$index * 80">
           <img
             class="team-photo"
             [src]="member.photo"

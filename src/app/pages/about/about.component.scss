@@ -40,7 +40,7 @@
   font-size: 0.95rem;
 }
 .values {
-  background: var(--paper);
+  background: #fff;
 }
 .values .solution-grid {
   gap: clamp(30px, 6vw, 84px);
@@ -88,32 +88,7 @@
 }
 
 .about-hero {
-  min-height: 530px;
-  display: flex;
-  align-items: center;
-  color: #fff;
-  background:
-    linear-gradient(
-      90deg,
-      rgb(16 42 67 / 96%) 0%,
-      rgb(16 42 67 / 88%) 47%,
-      rgb(16 42 67 / 24%) 100%
-    ),
-    url('/surveillance_center.jpg') center 48% / cover;
-}
-
-.about-hero h1,
-.about-hero .lead {
-  color: #fff;
-}
-.about-hero .page-copy {
-  max-width: 780px;
-  margin-inline: 0 auto;
-}
-.about-hero .button.primary {
-  border-color: var(--signal);
-  color: var(--ink);
-  background: var(--signal);
+  --hero-image: url('/surveillance_center.jpg');
 }
 
 .about-grid {
@@ -146,9 +121,6 @@
   grid-template-columns: 14px minmax(0, 1fr);
   padding-block: 24px;
 }
-.values {
-  background: #fff;
-}
 .values .section-head {
   margin-bottom: 36px;
 }
@@ -174,10 +146,6 @@
 }
 
 @media (max-width: 760px) {
-  .about-hero {
-    min-height: 440px;
-    background-position: 58% center;
-  }
   .about-grid {
     border-radius: 10px;
   }

@@ -2,10 +2,6 @@
   display: block;
 }
 
-.video-section {
-  background: var(--paper);
-}
-
 .section > p {
   max-width: 650px;
   color: var(--muted);
@@ -20,35 +16,8 @@
   max-width: 360px;
 }
 
-.video-section app-video {
-  margin-top: 34px;
-}
-
 .carbon-hero {
-  min-height: 570px;
-  display: flex;
-  align-items: center;
-  color: #fff;
-  background:
-    linear-gradient(
-      90deg,
-      rgb(16 42 67 / 97%) 0%,
-      rgb(16 42 67 / 78%) 46%,
-      rgb(16 42 67 / 15%) 100%
-    ),
-    url('/registre_environnemental_et_carbone.jpg') center 56% / cover;
-}
-.carbon-hero h1,
-.carbon-hero .lead {
-  color: #fff;
-}
-.carbon-hero .page-copy {
-  max-width: 760px;
-}
-.carbon-hero .button.primary {
-  border-color: var(--signal);
-  color: var(--ink);
-  background: var(--signal);
+  --hero-image: url('/registre_environnemental_et_carbone.jpg');
 }
 
 .intro {
@@ -129,10 +98,6 @@
 }
 
 @media (max-width: 760px) {
-  .carbon-hero {
-    min-height: 460px;
-    background-position: 60% center;
-  }
   .intro {
     grid-template-columns: 1fr;
     gap: 18px;

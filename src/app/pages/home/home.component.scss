@@ -65,31 +65,10 @@
   width: 100%;
   max-width: 800px;
   margin: 0;
-  color: #d0dfe7;
 }
 
 .home-hero .actions {
   margin-top: 34px;
-}
-
-.home-hero .button.primary {
-  border-color: var(--signal);
-  color: var(--ink);
-  background: var(--signal);
-}
-
-.home-hero .button.primary:hover {
-  border-color: #f2c574;
-  color: var(--ink);
-  background: #f2c574;
-}
-
-.home-hero .text-button {
-  color: #fff;
-}
-
-.home-hero .text-button:hover {
-  background: rgb(255 255 255 / 12%);
 }
 
 .expertise {

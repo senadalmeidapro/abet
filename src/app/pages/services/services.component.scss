@@ -1,29 +1,5 @@
 .services-hero {
-  min-height: 490px;
-  display: flex;
-  align-items: center;
-  color: #fff;
-  background:
-    linear-gradient(
-      90deg,
-      rgb(16 42 67 / 96%) 0%,
-      rgb(16 42 67 / 82%) 50%,
-      rgb(16 42 67 / 20%) 100%
-    ),
-    url('/surveillance.jpg') center 48% / cover;
-}
-
-.services-hero h1,
-.services-hero .lead {
-  color: #fff;
-}
-.services-hero .page-copy {
-  max-width: 740px;
-}
-.services-hero .button.primary {
-  border-color: var(--signal);
-  color: var(--ink);
-  background: var(--signal);
+  --hero-image: url('/surveillance.jpg');
 }
 
 :host {
@@ -37,9 +13,6 @@
   min-height: 220px;
   padding: 28px 18px 30px 0;
   background: transparent;
-  transition:
-    background-color var(--transition-base),
-    padding var(--transition-base);
 }
 .service-grid > article h3 {
   max-width: 260px;
@@ -48,15 +21,7 @@
 .service-grid > article p {
   max-width: 340px;
 }
-.contact-cta {
-  border-radius: 10px;
-}
-
 @media (max-width: 760px) {
-  .services-hero {
-    min-height: 420px;
-    background-position: 62% center;
-  }
   .service-grid > article {
     min-height: 0;
     padding: 23px 0 26px;

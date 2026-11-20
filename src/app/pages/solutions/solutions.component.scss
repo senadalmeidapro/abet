@@ -88,31 +88,7 @@
 }
 
 .solutions-hero {
-  min-height: 510px;
-  display: flex;
-  align-items: center;
-  color: #fff;
-  background:
-    linear-gradient(
-      90deg,
-      rgb(16 42 67 / 96%) 0%,
-      rgb(16 42 67 / 84%) 48%,
-      rgb(16 42 67 / 16%) 100%
-    ),
-    url('/iacd_banner.jpg') center 52% / cover;
-}
-
-.solutions-hero h1,
-.solutions-hero .lead {
-  color: #fff;
-}
-.solutions-hero .page-copy {
-  max-width: 750px;
-}
-.solutions-hero .button.primary {
-  border-color: var(--signal);
-  color: var(--ink);
-  background: var(--signal);
+  --hero-image: url('/iacd_banner.jpg');
 }
 
 .solution-block {
@@ -163,10 +139,6 @@
 }
 
 @media (max-width: 760px) {
-  .solutions-hero {
-    min-height: 430px;
-    background-position: 63% center;
-  }
   .solution-block > .section-head {
     margin-bottom: 28px;
   }

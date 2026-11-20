@@ -21,7 +21,14 @@ export class App {
 
   constructor(@Inject(DOCUMENT) private readonly document: Document) {
     afterNextRender(() => {
-      AOS.init();
+      AOS.init({
+        once: true,
+        duration: 650,
+        easing: 'ease-out-cubic',
+        offset: 80,
+        mirror: false,
+        disable: 'mobile',
+      });
       this.updateSeo();
 
       this.router.events

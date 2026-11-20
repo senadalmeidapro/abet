@@ -14,27 +14,9 @@
   color: var(--ocean);
 }
 .contact-hero {
-  min-height: 440px;
-  display: flex;
-  align-items: center;
-  color: #fff;
-  background: var(--ocean);
+  --hero-bg: var(--ocean);
 }
-.contact-hero h1,
-.contact-hero .lead {
-  color: #fff;
-}
-.contact-hero .page-copy {
-  max-width: 800px;
-}
-.contact-hero .button.primary {
-  border-color: var(--signal);
-  color: var(--ink);
-  background: var(--signal);
-}
-.contact-hero .text-button {
-  color: #fff;
-}
+
 .service-grid {
   display: flex;
   flex-direction: column;
@@ -117,7 +99,7 @@
 
 .form-field input.invalid,
 .form-field textarea.invalid {
-  border-color: #b3261e;
+  border-color: var(--danger);
 }
 
 .form-status {
@@ -128,13 +110,13 @@
 }
 
 .form-status.success {
-  color: #14532d;
-  background: #e8f5e9;
+  color: var(--success);
+  background: var(--success-bg);
 }
 
 .form-status.error {
-  color: #7f1d1d;
-  background: #fdecea;
+  color: var(--danger);
+  background: var(--danger-bg);
 }
 
 .honeypot {
@@ -158,11 +140,6 @@
 }
 
 @media (max-width: 760px) {
-  .contact-hero {
-    min-height: 380px;
-    background-position: 76% center;
-  }
-
   .contact-form-section {
     grid-template-columns: 1fr;
   }

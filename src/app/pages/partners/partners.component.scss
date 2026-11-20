@@ -1,23 +1,5 @@
 .partner-hero {
-  min-height: 390px;
-  display: flex;
-  align-items: center;
-  color: #fff;
-  background:
-    linear-gradient(
-      90deg,
-      rgb(16 42 67 / 97%) 0%,
-      rgb(16 42 67 / 78%) 46%,
-      rgb(16 42 67 / 15%) 100%
-    ),
-    url('/partners.jpg') center 56% / cover;
-}
-.partner-hero h1,
-.partner-hero .lead {
-  color: #fff;
-}
-.partner-hero .page-copy {
-  max-width: 770px;
+  --hero-image: url('/partners.jpg');
 }
 
 :host {
@@ -36,15 +18,8 @@ app-partner-grid {
   border-radius: 10px;
   background: var(--paper);
 }
-.contact-cta {
-  border-radius: 10px;
-}
 
 @media (max-width: 760px) {
-  .partner-hero {
-    min-height: 330px;
-    background-position: center;
-  }
   app-partner-grid {
     padding: 14px;
   }

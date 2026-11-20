@@ -3,12 +3,7 @@
 }
 
 .team-hero {
-  background: linear-gradient(120deg, var(--ocean) 0%, #0f5a63 100%);
-}
-
-.team-hero h1,
-.team-hero .lead {
-  color: #fff;
+  --hero-bg: linear-gradient(120deg, var(--ocean) 0%, #0f5a63 100%);
 }
 
 .team-content {
@@ -57,7 +52,7 @@
 
 .team-role {
   margin: 0 0 12px;
-  color: var(--teal);
+  color: var(--lagoon);
   font-size: 0.9rem;
   font-weight: 600;
 }
