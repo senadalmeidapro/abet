@@ -1,37 +1,33 @@
-<footer class="footer">
+﻿<footer class="footer">
   <div class="footer-main">
     <div class="footer-brand">
-      <a class="brand" routerLink="/">
+      <a class="brand" [routerLink]="language.localizePath('/')">
         <span class="brand-name">ABET for Africa</span>
       </a>
-      <p>
-        Votre partenaire dans la modernisation de vos opérations maritimes grâce à des solutions
-        intégrées de gestion des trafics, de surveillance maritime, de digitalisation et d’analyse
-        stratégique des données.
-      </p>
+      <p>{{ language.t('footer.brandText') }}</p>
     </div>
 
     <nav class="footer-column">
-      <h2>Navigation</h2>
-      <a routerLink="/">Accueil</a>
-      <a routerLink="/a-propos">À propos</a>
-      <a routerLink="/services">Domaines d’activités</a>
-      <a routerLink="/solutions">Nos Solutions</a>
-      <a routerLink="/partenaires">Partenaires</a>
-      <a routerLink="/equipe">Équipe</a>
-      <a routerLink="/contact">Contact</a>
+      <h2>{{ language.t('footer.navTitle') }}</h2>
+      <a [routerLink]="language.localizePath('/')">{{ language.t('nav.home') }}</a>
+      <a [routerLink]="language.localizePath('/a-propos')">{{ language.t('nav.about') }}</a>
+      <a [routerLink]="language.localizePath('/services')">{{ language.t('nav.services') }}</a>
+      <a [routerLink]="language.localizePath('/solutions')">{{ language.t('nav.solutions') }}</a>
+      <a [routerLink]="language.localizePath('/partenaires')">{{ language.t('nav.partners') }}</a>
+      <a [routerLink]="language.localizePath('/equipe')">{{ language.t('nav.team') }}</a>
+      <a [routerLink]="language.localizePath('/contact')">{{ language.t('nav.contact') }}</a>
     </nav>
 
     <nav class="footer-column">
-      <h2>Nos solutions</h2>
-      <a routerLink="/solutions/iacd-eez-scanner">
+      <h2>{{ language.t('footer.solutionsTitle') }}</h2>
+      <a [routerLink]="language.localizePath('/solutions/iacd-eez-scanner')">
         Intelligent Advanced Cargo Declaration &amp; Exclusive Economic Zone Scanner
       </a>
-      <a routerLink="/solutions/registre-carbone">Africa Blue &amp; Green Environmental Registry</a>
+      <a [routerLink]="language.localizePath('/solutions/registre-carbone')">Africa Blue &amp; Green Environmental Registry</a>
     </nav>
 
     <div class="footer-contact">
-      <h2>Contactez-nous</h2>
+      <h2>{{ language.t('common.contactUs') }}</h2>
       <address class="contact-details">
         <div class="contact-item">
           <svg class="contact-icon" viewBox="0 0 24 24" fill="none">
@@ -61,14 +57,14 @@
         </a>
       </address>
       <div class="footer-social">
-        <h2>Nous suivre</h2>
+        <h2>{{ language.t('footer.followTitle') }}</h2>
         @for (social of socials; track social.label) {
           <a
             class="social-link"
             [href]="social.url"
             target="_blank"
             rel="noopener noreferrer"
-            [attr.aria-label]="'ABET for Africa sur ' + social.label"
+            [attr.aria-label]="'ABET for Africa - ' + social.label"
           >
             <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path [attr.d]="social.iconPath" />
@@ -81,11 +77,11 @@
   </div>
 
   <div class="footer-bottom">
-    <span>© {{ year }} ABETM - Tous droits réservés.</span>
+    <span>&copy; {{ year }} ABETM - {{ language.t('footer.rights') }}</span>
     <nav class="footer-legal" aria-label="Informations légales">
-      <a routerLink="/mentions-legales">Mentions légales</a>
-      <a routerLink="/politique-de-confidentialite">Confidentialité</a>
-      <a routerLink="/conditions-d-utilisation">Conditions d’utilisation</a>
+      <a [routerLink]="language.localizePath('/mentions-legales')">{{ language.t('footer.legal') }}</a>
+      <a [routerLink]="language.localizePath('/politique-de-confidentialite')">{{ language.t('footer.privacy') }}</a>
+      <a [routerLink]="language.localizePath('/conditions-d-utilisation')">{{ language.t('footer.terms') }}</a>
     </nav>
   </div>
 </footer>

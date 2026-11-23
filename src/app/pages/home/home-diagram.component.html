@@ -1,9 +1,9 @@
 <div class="diagram">
-  <div class="ring"></div>
-  <div class="ring"></div>
-  <div class="ring"></div>
   <div class="core">ABET<span>for Africa</span></div>
-  <span class="step">Concevoir</span>
-  <span class="step accent">Déployer</span>
-  <span class="step">Exploiter</span>
+  <div class="step"></div>
+  <div class="step accent"></div>
+  <div class="step"></div>
+  <span>{{ language.lang() === 'en' ? 'Design' : 'Concevoir' }}</span>
+  <span>{{ language.lang() === 'en' ? 'Deploy' : 'Déployer' }}</span>
+  <span>{{ language.lang() === 'en' ? 'Operate' : 'Exploiter' }}</span>
 </div>

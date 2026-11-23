@@ -1,6 +1,6 @@
 <div class="partner-grid" [class.compact]="compact">
   @for (partner of partners; track partner.name) {
-    <article class="partner-cell">
+    <article class="partner-cell" data-aos="zoom-in-up" [attr.data-aos-delay]="$index * 250">
       @if (partner.url) {
         <a
           class="partner-logo-link"

@@ -1,7 +1,7 @@
 <section class="page-hero page-hero--flat contact-hero">
   <div class="page-copy">
-    <h1>Contactez-nous</h1>
-    <p class="lead on-dark">Africa Blue Economy and Traffic Management LLC</p>
+    <h1>{{ language.t('contact.heroTitle') }}</h1>
+    <p class="lead on-dark">{{ language.t('contact.heroLead') }}</p>
     <div class="actions">
       <a class="button primary" href="mailto:contact@abetforafrica.com"
         >contact&#64;abetforafrica.com</a
@@ -12,97 +12,90 @@
 </section>
 
 <section class="section contact-form-section">
-  <div class="contact-form-intro" data-aos="fade-up">
-    <h2>Contactez-Nous</h2>
-    <p>Écrivez-nous pour toute demande concernant nos activités et nos solutions.</p>
+  <div class="contact-form-intro">
+    <h2>{{ language.t('contact.formTitle') }}</h2>
+    <p>{{ language.t('contact.formLead') }}</p>
 
-    <div class="service-grid" data-aos="fade-up" data-aos-delay="100">
+    <div class="service-grid">
       <article>
-        <span>LOCALISATION</span>
+        <span>{{ language.t('contact.location') }}</span>
         <h3>Nad Al Sheba, Meydan City</h3>
         <p>Dubaï, Émirats arabes unis</p>
       </article>
       <article>
-        <span>TÉLÉPHONE</span>
+        <span>{{ language.t('contact.phone') }}</span>
         <h3><a href="tel:+971585778337">(+971) 585-778-337</a></h3>
       </article>
       <article>
-        <span>ADRESSE MAIL</span>
+        <span>{{ language.t('contact.email') }}</span>
         <h3><a href="mailto:contact@abetforafrica.com">contact&#64;abetforafrica.com</a></h3>
       </article>
     </div>
   </div>
-  <form
-    class="contact-form"
-    [formGroup]="contactForm"
-    (ngSubmit)="onSubmit()"
-    novalidate
-    data-aos="fade-left"
-    data-aos-delay="100"
-  >
+  <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
     @if (status === 'success') {
-      <p class="form-status success" role="status">Votre message a bien été envoyé.</p>
+      <p class="form-status success" role="status">{{ language.t('contact.success') }}</p>
     }
     @if (status === 'error') {
       <p class="form-status error" role="alert">
-        Impossible d'envoyer votre message pour le moment. Veuillez réessayer.
+        {{ language.t('contact.error') }}
       </p>
     }
     <div class="form-field">
-      <label for="contact-name">Nom et prénom</label>
+      <label for="contact-name">{{ language.t('contact.name') }}</label>
       <input
         id="contact-name"
         formControlName="name"
         type="text"
-        placeholder="Entrez votre nom et prénom"
+        [placeholder]="language.t('contact.namePh')"
         [class.invalid]="contactForm.controls.name.invalid && contactForm.controls.name.touched"
       />
     </div>
     <div class="form-field">
-      <label for="contact-email">Email</label>
+      <label for="contact-email">{{ language.t('contact.emailField') }}</label>
       <input
         id="contact-email"
         formControlName="email"
         type="email"
-        placeholder="Entrez votre Email"
+        [placeholder]="language.t('contact.emailPh')"
         [class.invalid]="contactForm.controls.email.invalid && contactForm.controls.email.touched"
       />
     </div>
     <div class="form-field">
-      <label for="contact-phone">Téléphone</label>
+      <label for="contact-phone">{{ language.t('contact.phoneField') }}</label>
       <input
         id="contact-phone"
         formControlName="phone"
         type="tel"
-        placeholder="Entrez votre numéro de téléphone"
+        [placeholder]="language.t('contact.phonePh')"
       />
     </div>
     <div class="form-field">
-      <label for="contact-subject">Sujet</label>
+      <label for="contact-subject">{{ language.t('contact.subject') }}</label>
       <input
         id="contact-subject"
         formControlName="subject"
         type="text"
-        placeholder="Entrez le sujet"
+        [placeholder]="language.t('contact.subjectPh')"
         [class.invalid]="
           contactForm.controls.subject.invalid && contactForm.controls.subject.touched
         "
       />
     </div>
     <div class="form-field form-message">
-      <label for="contact-message">Message</label>
+      <label for="contact-message">{{ language.t('contact.message') }}</label>
       <textarea
         id="contact-message"
         formControlName="message"
         rows="6"
-        placeholder="Entrez votre message"
+        [placeholder]="language.t('contact.messagePh')"
         [class.invalid]="
           contactForm.controls.message.invalid && contactForm.controls.message.touched
         "
       ></textarea>
     </div>
     <div class="honeypot" aria-hidden="true">
-      <label for="contact-website">Site web</label>
+      <label for="contact-website">{{ language.t('contact.website') }}</label>
       <input
         id="contact-website"
         formControlName="website"
@@ -112,7 +105,7 @@
       />
     </div>
     <button class="button primary form-submit" type="submit" [disabled]="sending">
-      {{ sending ? 'Envoi…' : 'Envoyer' }}
+      {{ sending ? language.t('contact.sending') : language.t('contact.send') }}
     </button>
   </form>
 </section>

@@ -1,25 +1,24 @@
 <section class="page-hero page-hero--image partner-hero">
   <div class="page-copy">
-    <h1>Nos partenaires</h1>
+    <h1>{{ language.t('partners.heroTitle') }}</h1>
     <p class="lead on-dark">
-      Ils nous font confiance pour notre expertise et engagement au service du développement de
-      l’économie bleue et verte en Afrique.
+      {{ language.t('partners.heroLead') }}
     </p>
   </div>
 </section>
 
 <section class="section">
-  <div class="section-head" data-aos="fade-up">
+  <div class="section-head">
     <div>
-      <h2>Partenaires ABET</h2>
+      <h2>{{ language.t('partners.gridTitle') }}</h2>
     </div>
   </div>
-  <app-partner-grid data-aos="fade-up" data-aos-delay="100" />
+  <app-partner-grid />
 </section>
 
 <section class="section contact-cta">
   <div>
-    <h2>Nous contacter</h2>
+    <h2>{{ language.t('common.contactUs') }}</h2>
   </div>
-  <a class="button primary" routerLink="/contact">Nous contacter</a>
+  <a class="button primary" [routerLink]="language.localizePath('/contact')">{{ language.t('common.contactUs') }}</a>
 </section>

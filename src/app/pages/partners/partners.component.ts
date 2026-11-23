@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../core/i18n/language.service';
 import { RouterLink } from '@angular/router';
 import { PartnerGridComponent } from '../../shared/partner-grid/partner-grid.component';
 
@@ -9,4 +10,6 @@ import { PartnerGridComponent } from '../../shared/partner-grid/partner-grid.com
   templateUrl: './partners.component.html',
   styleUrl: './partners.component.scss',
 })
-export class PartnersComponent {}
+export class PartnersComponent {
+  readonly language = inject(LanguageService);
+}

@@ -7,7 +7,7 @@
 
 <section class="section legal-content">
   @for (section of page.sections; track section.heading) {
-    <article class="legal-block" data-aos="fade-up" [attr.data-aos-delay]="$index * 60">
+    <article class="legal-block">
       <h2>{{ section.heading }}</h2>
       @for (paragraph of section.paragraphs; track $index) {
         <p>{{ paragraph }}</p>

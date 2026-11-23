@@ -1,10 +1,11 @@
 import { DOCUMENT } from '@angular/common';
 import { afterNextRender, Component, DestroyRef, inject, Inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import AOS from 'aos';
 import { filter } from 'rxjs';
+import { langFromPath, stripLang, withLang } from './core/i18n/language.utils';
 import { SITE_URL } from './core/seo.config';
 
 @Component({
@@ -17,6 +18,7 @@ export class App {
   private readonly router = inject(Router);
   private readonly route = inject(ActivatedRoute);
   private readonly meta = inject(Meta);
+  private readonly title = inject(Title);
   private readonly destroyRef = inject(DestroyRef);
 
   constructor(@Inject(DOCUMENT) private readonly document: Document) {
@@ -27,7 +29,6 @@ export class App {
         easing: 'ease-out-cubic',
         offset: 80,
         mirror: false,
-        disable: 'mobile',
       });
       this.updateSeo();
 
@@ -49,17 +50,31 @@ export class App {
       snapshot = snapshot.firstChild;
     }
 
-    const description = snapshot.data['description'] as string | undefined;
+    const path = this.router.url.split('?')[0].split('#')[0] || '/';
+    const lang = langFromPath(path);
+    const basePath = stripLang(path);
+    this.document.documentElement.lang = lang;
+
+    const description =
+      (snapshot.data[lang === 'en' ? 'descriptionEn' : 'description'] as string | undefined) ??
+      (snapshot.data['description'] as string | undefined);
     if (description) {
       this.meta.updateTag({ name: 'description', content: description });
     }
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    const path = this.router.url.split('?')[0].split('#')[0] || '/';
-    const url = `${SITE_URL}${path}`;
-    this.setLink('canonical', url);
-    this.setLink('alternate', `${SITE_URL}/en${path === '/' ? '' : path}`, 'en');
-    this.setLink('alternate', url, 'x-default');
+    const title =
+      (snapshot.data[lang === 'en' ? 'titleEn' : 'titleFr'] as string | undefined) ??
+      (typeof snapshot.title === 'string' ? snapshot.title : undefined);
+    if (title) this.title.setTitle(title);
+
+    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    const frUrl = `${SITE_URL}${withLang(basePath, 'fr')}`;
+    const enUrl = `${SITE_URL}${withLang(basePath, 'en')}`;
+    const canonical = lang === 'en' ? enUrl : frUrl;
+    this.setLink('canonical', canonical);
+    this.setLink('alternate', frUrl, 'fr');
+    this.setLink('alternate', enUrl, 'en');
+    this.setLink('alternate', frUrl, 'x-default');
   }
 
   private setLink(rel: string, href: string, hreflang?: string): void {

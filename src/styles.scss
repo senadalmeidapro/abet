@@ -513,7 +513,6 @@ small {
   justify-content: space-between;
   gap: 32px;
   border-top: 1px solid var(--line);
-  border-radius: var(--radius-md);
   padding-inline: var(--section-gutter);
 }
 .contact-cta h2 {
@@ -590,10 +589,6 @@ small {
   .contact-cta {
     align-items: flex-start;
     flex-direction: column;
-  }
-  [data-aos] {
-    opacity: 1 !important;
-    transform: none !important;
   }
 }
 @media (max-width: 440px) {

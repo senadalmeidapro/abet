@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../core/i18n/language.service';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ContactData, ContactService } from '../../services/contact';
 
@@ -10,6 +11,7 @@ import { ContactData, ContactService } from '../../services/contact';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
+  readonly language = inject(LanguageService);
   readonly contactForm;
   sending = false;
   status: 'idle' | 'success' | 'error' = 'idle';

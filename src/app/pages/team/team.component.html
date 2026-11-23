@@ -1,9 +1,7 @@
 <section class="page-hero page-hero--flat team-hero">
   <div class="page-copy">
-    <h1>Notre équipe</h1>
-    <p class="lead on-dark">
-      Découvrez les femmes et les hommes qui portent la vision d’ABET for Africa.
-    </p>
+    <h1>{{ language.t('team.heroTitle') }}</h1>
+    <p class="lead on-dark">{{ language.t('team.heroLead') }}</p>
   </div>
 </section>
 
@@ -11,7 +9,7 @@
   <section class="section team-content">
     <div class="team-grid">
       @for (member of members; track $index) {
-        <article class="team-card" data-aos="fade-up" [attr.data-aos-delay]="$index * 80">
+        <article class="team-card">
           <img
             class="team-photo"
             [src]="member.photo"

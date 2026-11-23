@@ -1,11 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../core/i18n/language.service';
 
-type TeamMember = {
-  name: string;
-  role: string;
-  bio: string;
-  photo: string;
-};
+type TeamMember = { name: string; role: string; bio: string; photo: string };
 
 @Component({
   selector: 'app-team',
@@ -14,5 +10,6 @@ type TeamMember = {
   styleUrl: './team.component.scss',
 })
 export class TeamComponent {
+  readonly language = inject(LanguageService);
   readonly members: TeamMember[] = [];
 }

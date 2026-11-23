@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { LanguageService } from '../../core/i18n/language.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,6 +10,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
+  readonly language = inject(LanguageService);
   readonly year = new Date().getFullYear();
   readonly socials = [
     {

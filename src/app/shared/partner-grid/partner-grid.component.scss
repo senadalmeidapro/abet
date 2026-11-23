@@ -21,6 +21,7 @@
   border-radius: 10px;
   background: #fff;
   transition:
+    opacity var(--transition-base),
     transform var(--transition-base),
     box-shadow var(--transition-base),
     border-color var(--transition-base);

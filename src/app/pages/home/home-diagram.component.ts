@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../core/i18n/language.service';
 
 @Component({
   selector: 'app-home-diagram',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './home-diagram.component.html',
   styleUrl: './home-diagram.component.scss',
 })
-export class HomeDiagramComponent {}
+export class HomeDiagramComponent {
+  readonly language = inject(LanguageService);
+}

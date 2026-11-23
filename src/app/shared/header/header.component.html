@@ -1,6 +1,6 @@
-<header class="header">
+﻿<header class="header">
   <div class="header-inner">
-    <a class="brand" routerLink="/">
+    <a class="brand" [routerLink]="path('/')" (click)="closeMenus()">
       <img src="/logo_abet_head2.png" alt="ABET for Africa" />
     </a>
 
@@ -9,19 +9,113 @@
       type="button"
       (click)="menuOpen = !menuOpen"
       [class.is-open]="menuOpen"
+      [attr.aria-expanded]="menuOpen"
+      aria-controls="primary-navigation"
+      [attr.aria-label]="menuOpen ? language.t('header.closeMenu') : language.t('header.openMenu')"
     >
       <span></span>
       <span></span>
       <span></span>
     </button>
 
-    <nav id="primary-navigation" class="nav" [class.open]="menuOpen">
+    <nav
+      id="primary-navigation"
+      class="nav"
+      [class.open]="menuOpen"
+      [attr.aria-label]="language.t('header.navLabel')"
+    >
       @for (item of nav; track item.path) {
-        <a [routerLink]="item.path" [class.active]="isActive(item.path)" (click)="menuOpen = false">
-          {{ item.label }}
-        </a>
+        @if (item.path === '/solutions') {
+          <div
+            class="nav-solutions"
+            (mouseenter)="openSolutions()"
+            (mouseleave)="scheduleCloseSolutions()"
+            (focusout)="onSolutionsFocusOut($event)"
+            (keydown.escape)="closeMenus()"
+          >
+            <a
+              class="nav-link"
+              [routerLink]="path('/solutions')"
+              [class.active]="isActive('/solutions')"
+              (click)="closeMenus()"
+            >
+              {{ language.t(item.key) }}
+            </a>
+            <button
+              class="mega-toggle"
+              type="button"
+              [class.is-open]="solutionsOpen"
+              [attr.aria-expanded]="solutionsOpen"
+              [attr.aria-label]="
+                solutionsOpen ? language.t('header.hideSolutions') : language.t('header.showSolutions')
+              "
+              aria-controls="solutions-mega"
+              (click)="toggleSolutions()"
+            >
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                <path
+                  d="m4 6 4 4 4-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+
+            <div
+              id="solutions-mega"
+              class="mega-menu"
+              [class.open]="solutionsOpen"
+              [attr.aria-label]="language.t('header.solutionsLabel')"
+              (mouseenter)="openSolutions()"
+              (mouseleave)="onMegaMenuLeave($event)"
+            >
+              <div class="mega-intro">
+                <span>{{ language.t('nav.solutions') }}</span>
+                <p>{{ language.t('header.solutionsIntro') }}</p>
+              </div>
+              <div class="mega-links">
+                @for (solution of solutions; track solution.path) {
+                  <a
+                    class="mega-link"
+                    [class.active]="isActive(solution.path)"
+                    [routerLink]="path(solution.path)"
+                    (click)="closeMenus()"
+                  >
+                    <span class="mega-domain">{{ language.t(solution.domainKey) }}</span>
+                    <span class="mega-title">{{ solution.label }}</span>
+                    <span class="mega-desc">{{ language.t(solution.descriptionKey) }}</span>
+                  </a>
+                }
+              </div>
+            </div>
+          </div>
+        } @else {
+          <a
+            class="nav-link"
+            [routerLink]="path(item.path)"
+            [class.active]="isActive(item.path)"
+            (click)="closeMenus()"
+          >
+            {{ language.t(item.key) }}
+          </a>
+        }
       }
-      <a class="nav-contact" routerLink="/contact" (click)="menuOpen = false"> Contact </a>
+
+      <div class="lang-switch" [attr.aria-label]="language.t('header.language')">
+        <button type="button" [class.active]="language.lang() === 'fr'" (click)="setLang('fr')">
+          FR
+        </button>
+        <button type="button" [class.active]="language.lang() === 'en'" (click)="setLang('en')">
+          EN
+        </button>
+      </div>
+
+      <a class="nav-contact" [routerLink]="path('/contact')" (click)="closeMenus()">
+        {{ language.t('nav.contact') }}
+      </a>
     </nav>
   </div>
 </header>
