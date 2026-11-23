@@ -1,5 +1,5 @@
 <section class="hero home-hero">
-  <div class="hero-img"><img src="/iacd_banner.jpg" alt="" /></div>
+  <div class="hero-img"><img src="/iacd_banner.jpg" [attr.alt]="language.t('home.heroTitle')" /></div>
   <div class="hero-copy">
     <h1>{{ language.t('home.heroTitle') }}</h1>
     <p class="lead on-dark">{{ language.t('home.heroLead') }}</p>
@@ -29,6 +29,7 @@
       [title]="language.t('home.iacdTitle')"
       [description]="language.t('home.iacdDesc')"
       image="/center_surveilance.jpg"
+      imageAlt="IACD & EEZ Scanner"
       [link]="language.localizePath('/solutions/iacd-eez-scanner')"
       [linkLabel]="language.t('common.discover')"
     />
@@ -39,6 +40,7 @@
       [title]="language.t('home.carbonTitle')"
       [description]="language.t('home.carbonDesc')"
       image="/registre_environnemental_et_carbone.jpg"
+      imageAlt="Africa Blue & Green Environmental Registry"
       [link]="language.localizePath('/solutions/registre-carbone')"
       [linkLabel]="language.t('common.discover')"
       [reverse]="true"

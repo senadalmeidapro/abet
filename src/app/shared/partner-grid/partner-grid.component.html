@@ -1,18 +1,18 @@
 <div class="partner-grid" [class.compact]="compact">
   @for (partner of partners; track partner.name) {
     <article class="partner-cell" data-aos="zoom-in-up" [attr.data-aos-delay]="$index * 250">
-      @if (partner.url) {
+      @if (descriptions[$index]?.url) {
         <a
           class="partner-logo-link"
-          [href]="partner.url"
+          [href]="descriptions[$index].url"
           target="_blank"
           rel="noopener noreferrer"
-          [attr.aria-label]="partner.name + ' — site officiel'"
+          [attr.aria-label]="partner.name"
         >
           <img
             [class]="'partner-logo ' + partner.logoClass"
             [src]="partner.src"
-            [alt]="'Logo de ' + partner.name"
+            [alt]="(language.lang() === 'en' ? 'Logo of ' : 'Logo de ') + partner.name"
             loading="lazy"
             decoding="async"
           />
@@ -21,13 +21,13 @@
         <img
           [class]="'partner-logo ' + partner.logoClass"
           [src]="partner.src"
-          [alt]="'Logo de ' + partner.name"
+          [alt]="(language.lang() === 'en' ? 'Logo of ' : 'Logo de ') + partner.name"
           loading="lazy"
           decoding="async"
         />
       }
-      @if (!compact && partner.description) {
-        <p class="partner-description">{{ partner.description }}</p>
+      @if (!compact) {
+        <p class="partner-description">{{ descriptions[$index]?.description }}</p>
       }
     </article>
   }

@@ -4,6 +4,10 @@
   "outputDirectory": "dist/abet/browser",
   "rewrites": [
     {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

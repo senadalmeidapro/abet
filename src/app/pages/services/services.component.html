@@ -1,53 +1,14 @@
 <section class="page-hero page-hero--image services-hero">
   <div class="page-copy">
-    <h1>Domaines d’activités</h1>
-    <p class="lead on-dark">
-      Appui aux États et aux organisations pour la conception et la gestion de projets maritimes,
-      portuaires et aéroportuaires.
-    </p>
-    <div class="actions">
-      <a class="button primary" routerLink="/contact">Nous contacter</a>
-    </div>
+    <h1>{{ c.heroTitle }}</h1>
+    <p class="lead on-dark">{{ c.heroLead }}</p>
+    <div class="actions"><a class="button primary" [routerLink]="language.localizePath('/contact')">{{ language.t('common.contactUs') }}</a></div>
   </div>
 </section>
-
 <section class="section">
-  <div class="section-head">
-    <div>
-      <h2>Domaines d’expertise</h2>
-    </div>
-  </div>
+  <div class="section-head"><div><h2>{{ c.expertiseTitle }}</h2></div></div>
   <div class="service-grid" data-aos="fade-up">
-    <article>
-      <h3>Appui aux États et aux organisations</h3>
-      <p>Conception et gestion de projets maritimes, portuaires et aéroportuaires.</p>
-    </article>
-    <article>
-      <h3>Vérification environnementale</h3>
-      <p>Appui à la mesure et à la vérification des données environnementales.</p>
-    </article>
-    <article>
-      <h3>Ingénierie logicielle</h3>
-      <p>Intelligence des données.</p>
-    </article>
-    <article>
-      <h3>Conseil</h3>
-      <p>Assistance technique et formation.</p>
-    </article>
-    <article>
-      <h3>Plateformes numériques et environnementales</h3>
-      <p>Mise en place de plateformes numériques et environnementales.</p>
-    </article>
-    <article>
-      <h3>Économie bleue et verte durable en Afrique</h3>
-      <p>Promotion et protection des ressources.</p>
-    </article>
+    @for (item of c.items; track item.title) { <article><h3>{{ item.title }}</h3><p>{{ item.text }}</p></article> }
   </div>
 </section>
-
-<section class="section contact-cta">
-  <div>
-    <h2>Nous contacter</h2>
-  </div>
-  <a class="button primary" routerLink="/contact">Nous contacter</a>
-</section>
+<section class="section contact-cta"><div><h2>{{ language.t('common.contactUs') }}</h2></div><a class="button primary" [routerLink]="language.localizePath('/contact')">{{ language.t('common.contactUs') }}</a></section>

@@ -2,7 +2,7 @@
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { DEFAULT_LANG, Lang, langFromPath, withLang } from './language.utils';
-import { TRANSLATIONS } from './translations';
+import { TRANSLATIONS, type TranslationDict } from './translations';
 
 type Dict = Record<string, unknown>;
 
@@ -18,6 +18,7 @@ export class LanguageService {
   private readonly router = inject(Router);
   readonly lang = signal<Lang>(DEFAULT_LANG);
   readonly isEnglish = computed(() => this.lang() === 'en');
+  readonly dict = computed<TranslationDict>(() => TRANSLATIONS[this.lang()]);
 
   constructor() {
     this.lang.set(langFromPath(this.router.url));
@@ -27,17 +28,8 @@ export class LanguageService {
   }
 
   t(key: string): string {
-    const current = TRANSLATIONS[this.lang()] as unknown as Dict;
-    const fallback = TRANSLATIONS.fr as unknown as Dict;
-    const value = getValue(current, key) ?? getValue(fallback, key);
+    const value = getValue(this.dict() as unknown as Dict, key) ?? getValue(TRANSLATIONS.fr as unknown as Dict, key);
     return typeof value === 'string' ? value : key;
-  }
-
-  tArray(key: string): string[] {
-    const current = TRANSLATIONS[this.lang()] as unknown as Dict;
-    const fallback = TRANSLATIONS.fr as unknown as Dict;
-    const value = getValue(current, key) ?? getValue(fallback, key);
-    return Array.isArray(value) ? value.filter((v): v is string => typeof v === 'string') : [];
   }
 
   localizePath(path: string, lang: Lang = this.lang()): string {

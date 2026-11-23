@@ -12,6 +12,6 @@
     <a [routerLink]="link">{{ linkLabel }}</a>
   </div>
   <div class="card-icon">
-    <img [src]="image" alt="" />
+    <img [src]="image" [alt]="imageAlt || title" />
   </div>
 </article>

@@ -13,6 +13,7 @@ export class HomeSolutionCardComponent {
   @Input() title = '';
   @Input() description = '';
   @Input() image = '';
+  @Input() imageAlt = '';
   @Input() link = '';
   @Input() linkLabel = '';
   @Input() reverse = false;

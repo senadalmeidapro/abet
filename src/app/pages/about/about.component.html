@@ -1,14 +1,10 @@
 <section class="page-hero page-hero--image about-hero">
   <div class="page-copy">
-    <h1>Africa Blue Economy and Traffic Management LLC</h1>
-    <p class="lead on-dark">
-      Une entreprise spécialisée dans la gouvernance maritime et aéroportuaire intelligente, la
-      gestion de registre environnemental, la transformation numérique et la valorisation durable de
-      l’économie bleue et verte en Afrique.
-    </p>
+    <h1>{{ c.heroTitle }}</h1>
+    <p class="lead on-dark">{{ c.heroLead }}</p>
     <div class="actions">
-      <a class="button primary" routerLink="/contact">Nous contacter</a>
-      <a class="button text-button" routerLink="/solutions">Nos solutions</a>
+      <a class="button primary" [routerLink]="language.localizePath('/contact')">{{ language.t('common.contactUs') }}</a>
+      <a class="button text-button" [routerLink]="language.localizePath('/solutions')">{{ language.t('nav.solutions') }}</a>
     </div>
   </div>
 </section>
@@ -16,123 +12,49 @@
 <section class="section">
   <div class="about-grid" data-aos="fade-up">
     <div>
-      <h2>Ce que nous faisons</h2>
-      <p>
-        Nous accompagnons la modernisation des opérations maritimes et aéroportuaires à travers des
-        solutions intégrées de surveillance, de gestion des trafics, de digitalisation et d’analyse
-        stratégique des données.
-      </p>
-      <p>
-        Dans le domaine environnemental, nous contribuons au renforcement de l’intégrité des données
-        et accompagnons les acteurs à la conformité réglementaire.
-      </p>
+      <h2>{{ c.whatTitle }}</h2>
+      <p>{{ c.whatP1 }}</p>
+      <p>{{ c.whatP2 }}</p>
     </div>
     <div class="principles" data-aos="zoom-in-right" data-aos-delay="500">
-      <div>
-        <span></span><b>Plateformes environnementales nationales</b>
-        <p>
-          Conception, déploiement et exploitation de plateformes et de registres environnementaux
-          transactionnels.
-        </p>
-      </div>
-      <div>
-        <span></span><b>Comptabilisation et valorisation</b>
-        <p>
-          Gestion des droits liés à la préservation de l’environnement et à la réparation des
-          atteintes environnementales.
-        </p>
-      </div>
-      <div>
-        <span></span><b>Vérification indépendante des données</b>
-        <p>
-          Mesure et vérification des émissions, appui à la certification des projets carbone et
-          exécution des transactions autorisées pour le compte des États.
-        </p>
-      </div>
+      @for (p of c.principles; track p.title) {
+        <div><span></span><b>{{ p.title }}</b><p>{{ p.text }}</p></div>
+      }
     </div>
   </div>
 </section>
 
 <section class="section values">
-  <div class="section-head">
-    <div>
-      <h2>Pour qui</h2>
-    </div>
-  </div>
-  <p class="lead">
-    États, institutions publiques et acteurs privés des secteurs maritime, portuaire, aérien et
-    environnemental.
-  </p>
+  <div class="section-head"><div><h2>{{ c.forWhom }}</h2></div></div>
+  <p class="lead">{{ c.forWhomLead }}</p>
   <div class="service-grid">
-    <article data-aos="zoom-in">
-      <h3>États et institutions publiques</h3>
-      <p>Appui à la gouvernance, à la planification et au suivi des politiques publiques.</p>
-    </article>
-    <article data-aos="zoom-in" data-aos-delay="100">
-      <h3>Opérateurs privés</h3>
-      <p>
-        Accompagnement des acteurs maritimes, portuaires et aériens dans la transformation numérique
-        et la gestion environnementale.
-      </p>
-    </article>
+    @for (a of c.audiences; track a.title; let i = $index) {
+      <article data-aos="zoom-in" [attr.data-aos-delay]="i ? '100' : null">
+        <h3>{{ a.title }}</h3><p>{{ a.text }}</p>
+      </article>
+    }
   </div>
 </section>
 
 <section class="section">
-  <div class="section-head">
-    <div>
-      <h2>Comment nous travaillons</h2>
-    </div>
-  </div>
+  <div class="section-head"><div><h2>{{ c.how }}</h2></div></div>
   <div class="solution-grid">
-    <article class="solution-card">
-      <span class="tag">SÉCURITÉ ET GOUVERNANCE</span>
-      <h3>Renforcer la sécurité maritime et aérienne.</h3>
-      <p>
-        Nous combinons surveillance, gestion des trafics et analyse des données pour appuyer la
-        sécurité et la gouvernance environnementale.
-      </p>
-    </article>
-    <article class="solution-card carbon-card">
-      <span class="tag">INNOVATION</span>
-      <h3>Les technologies numériques au service du développement durable.</h3>
-      <p>
-        Nos plateformes facilitent le suivi des données, la traçabilité des opérations et la
-        valorisation durable des ressources.
-      </p>
-    </article>
+    @for (w of c.work; track w.title) {
+      <article class="solution-card" [class.carbon-card]="w.carbon">
+        <span class="tag">{{ w.tag }}</span>
+        <h3>{{ w.title }}</h3>
+        <p>{{ w.text }}</p>
+      </article>
+    }
   </div>
   <div class="service-grid">
-    <article>
-      <h3>Appui aux États et aux organisations</h3>
-      <p>Conception et gestion de projets maritimes, portuaires et aéroportuaires.</p>
-    </article>
-    <article>
-      <h3>Vérification environnementale</h3>
-      <p>Appui à la mesure, à la vérification et à la certification des projets carbone.</p>
-    </article>
-    <article>
-      <h3>Ingénierie logicielle</h3>
-      <p>Intelligence des données.</p>
-    </article>
-    <article>
-      <h3>Conseil</h3>
-      <p>Assistance technique et formation.</p>
-    </article>
-    <article>
-      <h3>Plateformes numériques et environnementales</h3>
-      <p>Mise en place de plateformes.</p>
-    </article>
-    <article>
-      <h3>Économie bleue et verte durable en Afrique</h3>
-      <p>Promotion et protection des ressources.</p>
-    </article>
+    @for (e of c.expertise; track e.title) {
+      <article><h3>{{ e.title }}</h3><p>{{ e.text }}</p></article>
+    }
   </div>
 </section>
 
 <section class="section contact-cta">
-  <div>
-    <h2>Nous découvrir</h2>
-  </div>
-  <a class="button primary" routerLink="/contact">Nous contacter</a>
+  <div><h2>{{ c.discover }}</h2></div>
+  <a class="button primary" [routerLink]="language.localizePath('/contact')">{{ language.t('common.contactUs') }}</a>
 </section>

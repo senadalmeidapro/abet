@@ -5,15 +5,15 @@
   </div>
 </section>
 
-@if (members.length) {
-  <section class="section team-content">
+<section class="section team-content">
+  @if (members.length) {
     <div class="team-grid">
       @for (member of members; track $index) {
         <article class="team-card">
           <img
             class="team-photo"
             [src]="member.photo"
-            [alt]="'Portrait de ' + member.name"
+            [alt]="(language.lang() === 'en' ? 'Portrait of ' : 'Portrait de ') + member.name"
             loading="lazy"
             decoding="async"
           />
@@ -25,5 +25,7 @@
         </article>
       }
     </div>
-  </section>
-}
+  } @else {
+    <p class="lead">{{ language.t('team.comingSoon') }}</p>
+  }
+</section>

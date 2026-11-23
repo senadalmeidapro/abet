@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../core/i18n/language.service';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -8,4 +9,8 @@ import { RouterLink } from '@angular/router';
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
 })
-export class AboutComponent {}
+export class AboutComponent {
+  readonly language = inject(LanguageService);
+  get c() { return this.language.dict().about; }
+
+}

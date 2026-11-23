@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://abetforafrica.com/</loc></url>
-  <url><loc>https://abetforafrica.com/a-propos</loc></url>
-  <url><loc>https://abetforafrica.com/equipe</loc></url>
-  <url><loc>https://abetforafrica.com/services</loc></url>
-  <url><loc>https://abetforafrica.com/solutions</loc></url>
-  <url><loc>https://abetforafrica.com/solutions/iacd-eez-scanner</loc></url>
-  <url><loc>https://abetforafrica.com/solutions/registre-carbone</loc></url>
-  <url><loc>https://abetforafrica.com/partenaires</loc></url>
-  <url><loc>https://abetforafrica.com/contact</loc></url>
-  <url><loc>https://abetforafrica.com/mentions-legales</loc></url>
-  <url><loc>https://abetforafrica.com/politique-de-confidentialite</loc></url>
-  <url><loc>https://abetforafrica.com/conditions-d-utilisation</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://abetforafrica.com/</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://abetforafrica.com/"/></url>
+  <url><loc>https://abetforafrica.com/en/</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://abetforafrica.com/"/></url>
+  <url><loc>https://abetforafrica.com/a-propos</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/a-propos"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/a-propos"/></url>
+  <url><loc>https://abetforafrica.com/en/a-propos</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/a-propos"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/a-propos"/></url>
+  <url><loc>https://abetforafrica.com/services</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/services"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/services"/></url>
+  <url><loc>https://abetforafrica.com/en/services</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/services"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/services"/></url>
+  <url><loc>https://abetforafrica.com/solutions</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/solutions"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/solutions"/></url>
+  <url><loc>https://abetforafrica.com/en/solutions</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/solutions"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/solutions"/></url>
+  <url><loc>https://abetforafrica.com/solutions/iacd-eez-scanner</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/solutions/iacd-eez-scanner"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/solutions/iacd-eez-scanner"/></url>
+  <url><loc>https://abetforafrica.com/en/solutions/iacd-eez-scanner</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/solutions/iacd-eez-scanner"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/solutions/iacd-eez-scanner"/></url>
+  <url><loc>https://abetforafrica.com/solutions/registre-carbone</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/solutions/registre-carbone"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/solutions/registre-carbone"/></url>
+  <url><loc>https://abetforafrica.com/en/solutions/registre-carbone</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/solutions/registre-carbone"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/solutions/registre-carbone"/></url>
+  <url><loc>https://abetforafrica.com/partenaires</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/partenaires"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/partenaires"/></url>
+  <url><loc>https://abetforafrica.com/en/partenaires</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/partenaires"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/partenaires"/></url>
+  <url><loc>https://abetforafrica.com/equipe</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/equipe"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/equipe"/></url>
+  <url><loc>https://abetforafrica.com/en/equipe</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/equipe"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/equipe"/></url>
+  <url><loc>https://abetforafrica.com/contact</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/contact"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/contact"/></url>
+  <url><loc>https://abetforafrica.com/en/contact</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/contact"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/contact"/></url>
+  <url><loc>https://abetforafrica.com/mentions-legales</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/mentions-legales"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/mentions-legales"/></url>
+  <url><loc>https://abetforafrica.com/en/mentions-legales</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/mentions-legales"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/mentions-legales"/></url>
+  <url><loc>https://abetforafrica.com/politique-de-confidentialite</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/politique-de-confidentialite"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/politique-de-confidentialite"/></url>
+  <url><loc>https://abetforafrica.com/en/politique-de-confidentialite</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/politique-de-confidentialite"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/politique-de-confidentialite"/></url>
+  <url><loc>https://abetforafrica.com/conditions-d-utilisation</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/conditions-d-utilisation"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/conditions-d-utilisation"/></url>
+  <url><loc>https://abetforafrica.com/en/conditions-d-utilisation</loc><xhtml:link rel="alternate" hreflang="fr" href="https://abetforafrica.com/conditions-d-utilisation"/><xhtml:link rel="alternate" hreflang="en" href="https://abetforafrica.com/en/conditions-d-utilisation"/></url>
 </urlset>
