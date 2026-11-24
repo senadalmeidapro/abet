@@ -1,7 +1,7 @@
 <section class="page-hero page-hero--image solutions-hero">
   <div class="page-copy"><h1>{{ c.heroTitle }}</h1><p class="lead on-dark">{{ c.heroLead }}</p><div class="actions"><a class="button primary" [routerLink]="language.localizePath('/contact')">{{ language.t('common.contactUs') }}</a></div></div>
 </section>
-<section class="section"><div class="section-head"><div><h2>{{ c.marketsTitle }}</h2></div></div><div class="service-grid">@for(m of c.markets; track m.title){<article><h3>{{m.title}}</h3><p>{{m.text}}</p></article>}</div></section>
+<section class="section"><div class="section-head"><div><h2>{{ c.marketsTitle }}</h2></div></div><div class="service-grid">@for(m of c.markets; track m.title; let i = $index){<article data-aos="fade-up" [attr.data-aos-delay]="i * 100"><h3>{{m.title}}</h3><p>{{m.text}}</p></article>}</div></section>
 <section class="section solution-block">
   <div class="section-head"><div><h2>Intelligent Advanced Cargo Declaration &amp; Exclusive Economic Zone Scanner</h2><p class="lead">{{ c.iacdLead }}</p></div></div>
   <div class="detail-layout"><div><p>{{c.iacdP1}}</p><p>{{c.iacdP2}}</p><a class="button primary" [routerLink]="language.localizePath('/solutions/iacd-eez-scanner')">{{language.t('common.discover')}}</a></div>
@@ -10,8 +10,8 @@
 <section class="section solution-block">
   <div class="section-head"><div><h2>Africa Blue &amp; Green Environmental Registry</h2><p class="lead">{{ c.carbonLead }}</p></div></div>
   <p>{{c.carbonP1}}</p>
-  <div class="service-grid">@for(card of c.carbonCards; track card.title){<article><h3>{{card.title}}</h3><p>{{card.text}}</p></article>}</div>
+  <div class="service-grid">@for(card of c.carbonCards; track card.title; let i = $index){<article data-aos="fade-up" [attr.data-aos-delay]="i * 100"><h3>{{card.title}}</h3><p>{{card.text}}</p></article>}</div>
   <div class="video-row"><app-video data-aos="fade-up" data-aos-delay="120" videoId="bM14qiSiBfw" [title]="language.lang()==='en' ? 'Environmental and carbon registry presentation' : 'Présentation du registre environnemental et carbone'" /></div>
 </section>
-<section class="section"><div class="section-head"><div><h2>{{c.forWhomTitle}}</h2><p class="lead">{{c.forWhomLead}}</p></div></div><div class="service-grid">@for(w of c.why; track w.title){<article><h3>{{w.title}}</h3><p>{{w.text}}</p></article>}</div></section>
+<section class="section"><div class="section-head"><div><h2>{{c.forWhomTitle}}</h2><p class="lead">{{c.forWhomLead}}</p></div></div><div class="service-grid">@for(w of c.why; track w.title; let i = $index){<article data-aos="fade-up" [attr.data-aos-delay]="i * 100"><h3>{{w.title}}</h3><p>{{w.text}}</p></article>}</div></section>
 <section class="dark-panel"><div class="panel-copy"><h2>{{c.panelTitle}}</h2><p>{{c.panelText}}</p><a class="button light-button" [routerLink]="language.localizePath('/contact')">{{language.t('common.contactUs')}}</a></div></section>

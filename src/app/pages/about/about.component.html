@@ -39,8 +39,8 @@
 <section class="section">
   <div class="section-head"><div><h2>{{ c.how }}</h2></div></div>
   <div class="solution-grid">
-    @for (w of c.work; track w.title) {
-      <article class="solution-card" [class.carbon-card]="w.carbon">
+    @for (w of c.work; track w.title; let i = $index) {
+      <article class="solution-card" [class.carbon-card]="w.carbon" data-aos="fade-up" [attr.data-aos-delay]="i * 120">
         <span class="tag">{{ w.tag }}</span>
         <h3>{{ w.title }}</h3>
         <p>{{ w.text }}</p>
@@ -48,8 +48,10 @@
     }
   </div>
   <div class="service-grid">
-    @for (e of c.expertise; track e.title) {
-      <article><h3>{{ e.title }}</h3><p>{{ e.text }}</p></article>
+    @for (e of c.expertise; track e.title; let i = $index) {
+      <article data-aos="fade-up" [attr.data-aos-delay]="(i % 3) * 100">
+        <h3>{{ e.title }}</h3><p>{{ e.text }}</p>
+      </article>
     }
   </div>
 </section>

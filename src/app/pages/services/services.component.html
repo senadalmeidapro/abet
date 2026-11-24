@@ -7,8 +7,13 @@
 </section>
 <section class="section">
   <div class="section-head"><div><h2>{{ c.expertiseTitle }}</h2></div></div>
-  <div class="service-grid" data-aos="fade-up">
-    @for (item of c.items; track item.title) { <article><h3>{{ item.title }}</h3><p>{{ item.text }}</p></article> }
+  <div class="service-grid">
+    @for (item of c.items; track item.title; let i = $index) {
+      <article data-aos="fade-up" [attr.data-aos-delay]="(i % 3) * 100">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </article>
+    }
   </div>
 </section>
 <section class="section contact-cta"><div><h2>{{ language.t('common.contactUs') }}</h2></div><a class="button primary" [routerLink]="language.localizePath('/contact')">{{ language.t('common.contactUs') }}</a></section>

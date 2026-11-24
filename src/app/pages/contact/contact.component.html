@@ -17,22 +17,22 @@
     <p>{{ language.t('contact.formLead') }}</p>
 
     <div class="service-grid">
-      <article>
+      <article data-aos="fade-up">
         <span>{{ language.t('contact.location') }}</span>
         <h3>Nad Al Sheba, Meydan City</h3>
         <p>Dubaï, Émirats arabes unis</p>
       </article>
-      <article>
+      <article data-aos="fade-up" data-aos-delay="100">
         <span>{{ language.t('contact.phone') }}</span>
         <h3><a href="tel:+971585778337">(+971) 585-778-337</a></h3>
       </article>
-      <article>
+      <article data-aos="fade-up" data-aos-delay="200">
         <span>{{ language.t('contact.email') }}</span>
         <h3><a href="mailto:contact@abetforafrica.com">contact&#64;abetforafrica.com</a></h3>
       </article>
     </div>
   </div>
-  <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+  <form class="contact-form" data-aos="fade-up" data-aos-delay="100" [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
     @if (status === 'success') {
       <p class="form-status success" role="status">{{ language.t('contact.success') }}</p>
     }

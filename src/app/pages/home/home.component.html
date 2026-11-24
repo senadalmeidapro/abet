@@ -13,8 +13,10 @@
 <section class="section expertise">
   <div class="section-head"><div><h2>{{ language.t('home.expertiseTitle') }}</h2></div></div>
   <div class="sector-list">
-    @for (item of expertise; track item.title) {
-      <div><b>{{ item.title }}</b><small>{{ item.text }}</small></div>
+    @for (item of expertise; track item.title; let i = $index) {
+      <div data-aos="fade-up" [attr.data-aos-delay]="(i % 2) * 80">
+        <b>{{ item.title }}</b><small>{{ item.text }}</small>
+      </div>
     }
   </div>
   <p class="section-link"><a [routerLink]="language.localizePath('/services')">{{ language.t('home.expertiseLink') }}</a></p>
